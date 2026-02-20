@@ -1,0 +1,53 @@
+rule cyware_intel_exchange_brute_force_attempt {
+ 
+  meta:
+    author = "CYWARE INTEL EXCHANGE"
+    rule_name = "Cyware Intelligence - Brute Force Login Detection"
+    description = "Detects multiple failed login attempts from IPs flagged by Cyware threat intelligence."
+    severity = "High"
+    priority = "High"
+    mitre_attack_tactic = "Credential Access"
+    mitre_attack_technique = "T1110 - Brute Force"
+    tags = "cloud security, threat intelligence, cyware intel exchange"
+ 
+  events:
+    $login.metadata.event_type = "USER_LOGIN"
+    $login.security_result.action = "BLOCK" or
+    $login.security_result.action = "FAIL"
+    (
+        strings.to_lower($login.src.ip) = $correlation_ip or
+        strings.to_lower($login.principal.ip) = $correlation_ip
+    ) 
+    $cyware.graph.metadata.threat.risk_score >= 70
+    $cyware.graph.metadata.event_metadata.base_labels.log_types  = "CTIX"
+    $cyware.graph.metadata.product_name = "Cyware Intel Exchange"
+    $cyware.graph.metadata.entity_type = "IP_ADDRESS"
+    $cyware.graph.entity.ip = $correlation_ip
+  match:
+    $correlation_ip over 15m
+ 
+  outcome:
+    $principal_ip = array_distinct($login.principal.ip)
+    $principal_hostname = array_distinct($login.principal.hostname)
+    $principal_user_userid = array_distinct($login.principal.user.userid)
+    $principal_mac = array_distinct($login.principal.mac)
+
+    $event_count = count_distinct($login.metadata.id)
+    
+    $source_ip = array_distinct($login.src.ip)
+    $source_hostname = array_distinct($login.src.hostname)
+    $source_user_userid = array_distinct($login.src.user.userid)
+    $source_mac = array_distinct($login.src.mac)
+    
+    // Cyware-specific metadata - corrected field paths
+    $cyware_threat_id = array_distinct($cyware.graph.metadata.threat.threat_id)
+    $cyware_risk_score = array_distinct($cyware.graph.metadata.threat.risk_score)
+    $cyware_severity = array_distinct($cyware.graph.metadata.threat.severity)
+    $cyware_description = array_distinct($cyware.graph.metadata.description)
+    $cyware_tags = array_distinct($cyware.graph.entity.artifact.tags)
+    $cyware_country = array_distinct($cyware.graph.entity.artifact.location.country_or_region)
+    $risk_score = max($cyware.graph.metadata.threat.risk_score)
+
+  condition:
+        $login and $cyware and ($event_count > 5)
+}

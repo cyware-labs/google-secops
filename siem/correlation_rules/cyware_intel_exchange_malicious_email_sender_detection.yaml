@@ -1,0 +1,55 @@
+rule cyware_intel_exchange_malicious_email_sender_detection {
+
+  meta:
+    author = "CYWARE INTEL EXCHANGE"
+    rule_name = "Cyware Intelligence - Malicious Email Sender Detection"
+    description = "Detects inbound emails from sender addresses or domains classified as malicious by Cyware."
+    severity = "High"
+    priority = "Critical"
+    mitre_attack_tactic = "Initial Access"
+    mitre_attack_technique = "T1566 - Phishing"
+    tags = "cloud security, threat intelligence, cyware intel exchange, email"
+
+  events:
+    $email.metadata.event_type = "EMAIL_TRANSACTION"
+    (
+        strings.to_lower($email.network.email.to)  = $correlation_email or
+        strings.to_lower($email.network.email.from)  = $correlation_email or
+        strings.to_lower($email.network.email.mail_id)  = $correlation_email
+    )
+
+    // Cyware entity match for email
+    $cyware.graph.metadata.event_metadata.base_labels.log_types  = "CTIX"
+    $cyware.graph.metadata.product_name = "Cyware Intel Exchange"
+    (
+        $cyware.graph.metadata.entity_type = "RESOURCE" or
+        $cyware.graph.metadata.entity_type = "USER"
+    )
+    $cyware.graph.metadata.threat.risk_score >= 70
+    $cyware.graph.entity.user.email_addresses = $correlation_email
+
+  match:
+    $correlation_email over 1h
+
+  outcome:
+    $email_from = array_distinct($email.network.email.from)
+    $email_to = array_distinct($email.network.email.to)
+    $email_subject = array_distinct($email.network.email.subject)
+    $email_cc = array_distinct($email.network.email.cc)
+    $email_bcc = array_distinct($email.network.email.bcc)
+    
+    $principal_ip = array_distinct($email.principal.ip)
+    $principal_hostname = array_distinct($email.principal.hostname)
+    
+    $source_ip = array_distinct($email.src.ip)
+    $source_hostname = array_distinct($email.src.hostname)
+    
+    $target_ip = array_distinct($email.target.ip)
+    $target_user_email = array_distinct($email.target.user.email_addresses)
+    
+    $cyware_risk_score = array_distinct($cyware.graph.metadata.threat.risk_score)
+    $risk_score = max($cyware.graph.metadata.threat.risk_score)
+
+  condition:
+    $email and $cyware
+}

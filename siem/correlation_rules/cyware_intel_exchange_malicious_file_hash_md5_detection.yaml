@@ -1,0 +1,52 @@
+
+rule cyware_intel_exchange_malicious_file_hash_md5_detection {
+
+  meta:
+    author = "CYWARE INTEL EXCHANGE"
+    rule_name = "Cyware Intelligence - Malicious File Hash Detection"
+    description = "Detects file hashes classified as malicious by Cyware in network telemetry."
+    severity = "High"
+    priority = "Critical"
+    mitre_attack_tactic = "Execution, Lateral Movement"
+    mitre_attack_technique = "T1204 - User Execution, T1570 - Lateral Tool Transfer"
+    tags = "cloud security, threat intelligence, cyware intel exchange, malware"
+
+  events:
+    (
+        $file.metadata.event_type = "FILE_CREATION" or
+        $file.metadata.event_type = "FILE_MODIFICATION" or
+        $file.metadata.event_type = "FILE_COPY" or
+        $file.metadata.event_type = "FILE_OPEN"
+    )
+    (
+        strings.to_lower($file.target.file.md5) = $correlation_hash or
+        strings.to_lower($file.src.file.md5) = $correlation_hash or
+        strings.to_lower($file.principal.file.md5) = $correlation_hash or
+        strings.to_lower($file.principal.process.file.md5) = $correlation_hash
+    )
+
+    // Cyware entity match for file hash
+    $cyware.graph.metadata.event_metadata.base_labels.log_types  = "CTIX"
+    $cyware.graph.metadata.product_name = "Cyware Intel Exchange"
+    $cyware.graph.metadata.entity_type = "FILE"
+    $cyware.graph.metadata.threat.risk_score >= 70
+    $cyware.graph.entity.file.md5 = $correlation_hash
+
+  match:
+    $correlation_hash over 1h
+
+  outcome:
+    $principal_file_md5 = array_distinct($file.principal.process.file.md5)
+    $principal_asset_hostname = array_distinct($file.principal.asset.hostname)
+    $principal_asset_id = array_distinct($file.principal.asset.asset_id)
+    $principal_user_userid = array_distinct($file.principal.user.userid)
+    
+    $file_path = array_distinct($file.target.file.full_path)
+    $file_md5 = array_distinct($file.target.file.md5)
+    
+    $cyware_confidence_score = array_distinct($cyware.graph.metadata.threat.risk_score)
+    $risk_score = max($cyware.graph.metadata.threat.risk_score)
+
+  condition:
+    $file and $cyware
+}

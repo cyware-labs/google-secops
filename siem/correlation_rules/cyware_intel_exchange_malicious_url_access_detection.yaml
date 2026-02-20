@@ -1,0 +1,53 @@
+rule cyware_intel_exchange_malicious_url_access_detection {
+
+  meta:
+    author = "CYWARE INTEL EXCHANGE"
+    rule_name = "Cyware Intelligence - Malicious URL Access Detection"
+    description = "Detects network connections attempting to access URLs marked as malicious by Cyware."
+    severity = "High"
+    priority = "Critical"
+    mitre_attack_tactic = "Initial Access, Command and Control"
+    mitre_attack_technique = "T1566 - Phishing, T1071 - Application Layer Protocol"
+    tags = "cloud security, threat intelligence, cyware intel exchange"
+
+  events:
+    (
+        $network.metadata.event_type = "NETWORK_HTTP" or
+        $network.metadata.event_type = "NETWORK_CONNECTION"
+    )
+    (
+        strings.to_lower($network.target.url) = $correlation_url or
+        strings.to_lower($network.principal.url) = $correlation_url or
+        re.regex(strings.to_lower($network.network.http.referral_url), $correlation_url)
+    )
+
+    $cyware.graph.metadata.event_metadata.base_labels.log_types  = "CTIX"
+    $cyware.graph.metadata.product_name = "Cyware Intel Exchange"
+    $cyware.graph.metadata.entity_type = "URL"
+    $cyware.graph.metadata.threat.risk_score >= 70
+    $cyware.graph.entity.url = $correlation_url
+
+  match:
+    $correlation_url over 1h
+
+  outcome:
+    $principal_ip = array_distinct($network.principal.url)
+    $principal_hostname = array_distinct($network.principal.hostname)
+    $principal_user_userid = array_distinct($network.principal.user.userid)
+    
+    $source_ip = array_distinct($network.src.url)
+    $source_hostname = array_distinct($network.src.hostname)
+    
+    $target_ip = array_distinct($network.target.ip)
+    $target_hostname = array_distinct($network.target.hostname)
+    $target_url = array_distinct($network.target.url)
+    
+    $http_user_agent = array_distinct($network.network.http.user_agent)
+    $http_method = array_distinct($network.network.http.method)
+    
+    $cyware_confidence_score = array_distinct($cyware.graph.metadata.threat.risk_score)
+    $risk_score = max($cyware.graph.metadata.threat.risk_score)
+
+  condition:
+    $network and $cyware
+}

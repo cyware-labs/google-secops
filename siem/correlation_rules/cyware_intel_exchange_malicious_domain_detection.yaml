@@ -1,0 +1,49 @@
+rule cyware_intel_exchange_malicious_domain_detection {
+
+  meta:
+    author = "Cyware Intel Exchange"
+    rule_name = "Cyware Intelligence - Malicious Domain DNS Resolution Detection"
+    description = "Detects DNS queries for domains marked as malicious by Cyware threat intelligence."
+    severity = "High"
+    priority = "Critical"
+    mitre_attack_tactic = "Command and Control"
+    mitre_attack_technique = "T1071.004 - Application Layer Protocol: DNS"
+    tags = "cloud security, threat intelligence, cyware intel exchange, dns"
+
+  events:
+    $dns.metadata.event_type = "NETWORK_DNS"
+    (
+        strings.to_lower($dns.principal.hostname) = $correlation_domain or
+        strings.to_lower($dns.principal.asset.hostname) = $correlation_domain or
+        strings.to_lower($dns.target.hostname) = $correlation_domain or
+        strings.to_lower($dns.target.asset.hostname) = $correlation_domain
+    )
+
+    // Cyware entity match for domain
+    $cyware.graph.metadata.event_metadata.base_labels.log_types  = "CTIX"
+    $cyware.graph.metadata.product_name = "Cyware Intel Exchange"
+    $cyware.graph.metadata.entity_type = "DOMAIN_NAME"
+    $cyware.graph.metadata.threat.risk_score >= 70
+    $cyware.graph.entity.domain.name = $correlation_domain
+
+  match:
+    $correlation_domain over 1h
+
+  outcome:
+    $principal_ip = array_distinct($dns.principal.ip)
+    $principal_asset_hostname = array_distinct($dns.principal.asset.hostname)
+    $principal_hostname = array_distinct($dns.principal.hostname)
+    $principal_user_userid = array_distinct($dns.principal.user.userid)
+    
+    $source_ip = array_distinct($dns.src.ip)
+    $source_hostname = array_distinct($dns.src.hostname)
+    
+    $target_ip = array_distinct($dns.target.ip)
+    $target_hostname = array_distinct($dns.target.hostname)
+    
+    $cyware_confidence_score = array_distinct($cyware.graph.metadata.threat.risk_score)
+    $risk_score = max($cyware.graph.metadata.threat.risk_score)
+
+  condition:
+    $dns and $cyware
+}

@@ -1,0 +1,1996 @@
+{
+    "dashboards": [
+        {
+            "dashboard": {
+                "name": "96edc6db-1a45-40e3-b98f-c815462da079",
+                "displayName": "Cyware Intel Exchange - Cyware IOCs Overview",
+                "description": "The dashboard is designed to visualize the IOCs ingested from Cyware Intel Exchange.",
+                "definition": {
+                    "filters": [
+                        {
+                            "id": "GlobalTimeFilter",
+                            "dataSource": "GLOBAL",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "PAST",
+                                    "fieldValues": [
+                                        "7",
+                                        "DAY"
+                                    ]
+                                }
+                            ],
+                            "displayName": "Global Time Filter",
+                            "isStandardTimeRangeFilter": true,
+                            "isStandardTimeRangeFilterEnabled": false
+                        },
+                        {
+                            "id": "06677749-0586-4800-adf5-c4f79ab58c8a",
+                            "dataSource": "ENTITY",
+                            "fieldPath": "graph.metadata.interval.start_time",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "PAST",
+                                    "fieldValues": [
+                                        "7",
+                                        "DAY"
+                                    ]
+                                }
+                            ],
+                            "displayName": "IOC Active Time",
+                            "chartIds": [
+                                "746e3908-778d-4bca-9811-a454b37c994d",
+                                "ffaed8b0-7206-4098-936a-04abaa26a08f",
+                                "01560ca5-cdef-4be5-9b0b-04bc95326c3e",
+                                "1a0fffc3-a12a-4f39-ada4-f7582d345b7b",
+                                "5d0358e4-12f9-4c44-a8e4-39ab08c38629",
+                                "84ee3d99-0ab1-48e0-aaf0-ec5939ee2c28",
+                                "eb4ca348-4b44-4e70-a84e-f345a8dd3edc",
+                                "e8bb473b-aac9-4228-a599-a324ef77beb3",
+                                "248c8299-0f50-4b4c-805f-bb65187637ef",
+                                "9fee753c-681c-465b-a664-09c6db7ec52b",
+                                "b8f5a45a-30a5-4670-82e9-42c7b415ab0f",
+                                "f562fcda-7785-409c-97a1-bd5b6a5844e6",
+                                "12214eff-75af-4cb3-9d99-d6b8e56fc03a",
+                                "33fe943d-a341-4f17-a5cd-e32d42159f05",
+                                "177dd9c1-7379-48f3-b88d-563fa37cece3",
+                                "22fccda1-707a-404b-bc26-8bf1aadf29b8"
+                            ]
+                        },
+                        {
+                            "id": "55b0d962-c2b7-4223-9033-706a931da62d",
+                            "dataSource": "ENTITY",
+                            "fieldPath": "graph.entity.namespace",
+                            "filterOperatorAndFieldValues": [
+                                {
+                                    "filterOperator": "IS_NOT_NULL"
+                                }
+                            ],
+                            "displayName": "Tenant Name",
+                            "chartIds": [
+                                "746e3908-778d-4bca-9811-a454b37c994d",
+                                "01560ca5-cdef-4be5-9b0b-04bc95326c3e",
+                                "ffaed8b0-7206-4098-936a-04abaa26a08f",
+                                "1a0fffc3-a12a-4f39-ada4-f7582d345b7b",
+                                "5d0358e4-12f9-4c44-a8e4-39ab08c38629",
+                                "84ee3d99-0ab1-48e0-aaf0-ec5939ee2c28",
+                                "eb4ca348-4b44-4e70-a84e-f345a8dd3edc",
+                                "e8bb473b-aac9-4228-a599-a324ef77beb3",
+                                "248c8299-0f50-4b4c-805f-bb65187637ef",
+                                "9fee753c-681c-465b-a664-09c6db7ec52b",
+                                "b8f5a45a-30a5-4670-82e9-42c7b415ab0f",
+                                "f562fcda-7785-409c-97a1-bd5b6a5844e6",
+                                "12214eff-75af-4cb3-9d99-d6b8e56fc03a",
+                                "33fe943d-a341-4f17-a5cd-e32d42159f05",
+                                "1b6d0a99-a64f-411f-afae-040be7ceff30",
+                                "cc80590f-e880-428f-ab16-8c8793ba2c38",
+                                "b8e49cff-406a-4045-9aee-e07da8dc90b1",
+                                "177dd9c1-7379-48f3-b88d-563fa37cece3",
+                                "22fccda1-707a-404b-bc26-8bf1aadf29b8"
+                            ]
+                        }
+                    ],
+                    "charts": [
+                        {
+                            "dashboardChart": "2e36e213-ba9b-4f37-b291-3b3bacbcc832",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 0,
+                                "spanY": 11
+                            }
+                        },
+                        {
+                            "dashboardChart": "01560ca5-cdef-4be5-9b0b-04bc95326c3e",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 23,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "84ee3d99-0ab1-48e0-aaf0-ec5939ee2c28",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 23,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "746e3908-778d-4bca-9811-a454b37c994d",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 23,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "5d0358e4-12f9-4c44-a8e4-39ab08c38629",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 59,
+                                "spanY": 27
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "1a0fffc3-a12a-4f39-ada4-f7582d345b7b",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 59,
+                                "spanY": 27
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "ffaed8b0-7206-4098-936a-04abaa26a08f",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 59,
+                                "spanY": 27
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "eb4ca348-4b44-4e70-a84e-f345a8dd3edc",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 24,
+                                "startY": 11,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "12214eff-75af-4cb3-9d99-d6b8e56fc03a",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 47,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "248c8299-0f50-4b4c-805f-bb65187637ef",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 47,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "9fee753c-681c-465b-a664-09c6db7ec52b",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 47,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "e8bb473b-aac9-4228-a599-a324ef77beb3",
+                            "chartLayout": {
+                                "startX": 32,
+                                "spanX": 32,
+                                "startY": 35,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "b8f5a45a-30a5-4670-82e9-42c7b415ab0f",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 32,
+                                "startY": 35,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "f562fcda-7785-409c-97a1-bd5b6a5844e6",
+                            "chartLayout": {
+                                "startX": 64,
+                                "spanX": 32,
+                                "startY": 35,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "1b6d0a99-a64f-411f-afae-040be7ceff30",
+                            "chartLayout": {
+                                "startX": 24,
+                                "spanX": 24,
+                                "startY": 11,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "b8e49cff-406a-4045-9aee-e07da8dc90b1",
+                            "chartLayout": {
+                                "startX": 48,
+                                "spanX": 24,
+                                "startY": 11,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "cc80590f-e880-428f-ab16-8c8793ba2c38",
+                            "chartLayout": {
+                                "startX": 72,
+                                "spanX": 24,
+                                "startY": 11,
+                                "spanY": 12
+                            },
+                            "filtersIds": [
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "33fe943d-a341-4f17-a5cd-e32d42159f05",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 48,
+                                "startY": 112,
+                                "spanY": 30
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "177dd9c1-7379-48f3-b88d-563fa37cece3",
+                            "chartLayout": {
+                                "startX": 48,
+                                "spanX": 48,
+                                "startY": 112,
+                                "spanY": 30
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        },
+                        {
+                            "dashboardChart": "22fccda1-707a-404b-bc26-8bf1aadf29b8",
+                            "chartLayout": {
+                                "startX": 0,
+                                "spanX": 96,
+                                "startY": 86,
+                                "spanY": 26
+                            },
+                            "filtersIds": [
+                                "06677749-0586-4800-adf5-c4f79ab58c8a",
+                                "55b0d962-c2b7-4223-9033-706a931da62d"
+                            ]
+                        }
+                    ]
+                },
+                "type": "CUSTOM",
+                "etag": "44203654f5815a99ebd6eafe250bf1709052730e2da52827e7a07c93d79d3ab0",
+                "access": "DASHBOARD_PRIVATE"
+            },
+            "dashboardCharts": [
+                {
+                    "name": "33fe943d-a341-4f17-a5cd-e32d42159f05",
+                    "displayName": "Number of Cyware IOCs By Country",
+                    "description": "Number of Cyware IOCs By Country.",
+                    "chartDatasource": {
+                        "dashboardQuery": "fe0f9e84-7fe6-4c3a-978a-606604c904b1",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "country"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=KMf(this.theme);b=GOf(b,jNf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "USA",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "USA"
+                                            }
+                                        },
+                                        {
+                                            "key": "North Korea",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "North Korea"
+                                            }
+                                        },
+                                        {
+                                            "key": "Japan",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "Japan"
+                                            }
+                                        },
+                                        {
+                                            "key": "Russia",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "Russia"
+                                            }
+                                        },
+                                        {
+                                            "key": "China",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "China"
+                                            }
+                                        },
+                                        {
+                                            "key": "UK",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "UK"
+                                            }
+                                        },
+                                        {
+                                            "key": "Iran",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "Iran"
+                                            }
+                                        },
+                                        {
+                                            "key": "India",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "India"
+                                            }
+                                        },
+                                        {
+                                            "key": "Germany",
+                                            "value": {
+                                                "color": "#6f7585",
+                                                "label": "Germany"
+                                            }
+                                        },
+                                        {
+                                            "key": "France",
+                                            "value": {
+                                                "color": "#923ef9",
+                                                "label": "France"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "bottom": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7bf2bb559b3865189817d06c34607f5baf4259b55066ec5fe24e138175ad5a25",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "746e3908-778d-4bca-9811-a454b37c994d",
+                    "displayName": "Medium Severity Cyware IOCs",
+                    "description": "Number of Cyware IOCs with Medium Severity  or risk score is between 30 to 69.",
+                    "chartDatasource": {
+                        "dashboardQuery": "10504694-f3a8-43d6-9b0e-50ebb0e5fee8",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Medium Severity Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#eb730a"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "dbba0b423fc8d9cfdd3b29e2d4489a915912b09401f9501ca3cb993da3c2b7ef",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "2A03C386-3BED-4121-BD33-C5E411A73093",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\ngraph.metadata.threat.severity = \"MEDIUM\" or (graph.metadata.threat.risk_score >= 30 and graph.metadata.threat.risk_score <= 69)\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "84ee3d99-0ab1-48e0-aaf0-ec5939ee2c28",
+                    "displayName": "High Severity Cyware IOCs",
+                    "description": "Number of Cyware IOCs with High Severity  or risk score >= 70.",
+                    "chartDatasource": {
+                        "dashboardQuery": "58b6e276-25c4-4830-bbb6-2eacf1cd65a3",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "High Severity Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#ec453b"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "6df4f0e9a57b7d39bb39f4b43a59cf67c48edcbd8c11ccf762a37fa7df9444e4",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "2393976B-A1B7-417D-866B-FC6C5ED06F06",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\ngraph.metadata.threat.severity = \"HIGH\" or (graph.metadata.threat.risk_score >= 70)\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "248c8299-0f50-4b4c-805f-bb65187637ef",
+                    "displayName": "False Positive Cyware IOCs",
+                    "description": "False Positive Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "82f98ffb-ae1f-4e73-9728-f4a31267f9cd",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "False Positive Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "06e76933ec0f2e46ecbb20e06ffb3f13159817303f88b1cbac0b89d436ff79b9",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C746655F-A4EC-4DE1-A70E-62D6226F972A",
+                                "displayName": "iocs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_false_positive = graph.additional.fields[\"is_false_positive\"]\r\n$is_false_positive = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "9fee753c-681c-465b-a664-09c6db7ec52b",
+                    "displayName": "Whitelisted Cyware IOCs",
+                    "description": "Whitelisted Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "6d2db18b-8847-4407-bc31-bee424d620ae",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Whitelisted Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7deda3e22b3fb9d44b0426640bc9e678942dd043b5828ba855aa78186566d670",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C746655F-A4EC-4DE1-A70E-62D6226F972A",
+                                "displayName": "iocs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_false_positive = graph.additional.fields[\"is_whitelist\"]\r\n$is_false_positive = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "eb4ca348-4b44-4e70-a84e-f345a8dd3edc",
+                    "displayName": "Total Unique Cyware IOCs",
+                    "description": "Total Unique Cyware IOCs in SecOps",
+                    "chartDatasource": {
+                        "dashboardQuery": "7e025232-4502-491e-bea3-abfe2f310e62",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Total Unique Cyware IOCs",
+                                "field": "all_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d1f1567fa727f5cb571b53f7507d95208992ccd2ad030666f386aa556393db83",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "ffaed8b0-7206-4098-936a-04abaa26a08f",
+                    "displayName": "Number of Cyware IOCs By Severity",
+                    "description": "Number of Cyware IOCs By Severity",
+                    "chartDatasource": {
+                        "dashboardQuery": "8ff9b60d-6bf7-48ef-824e-9c33ad45df4d",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "severity"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=KMf(this.theme);b=GOf(b,jNf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "UNKNOWN_SEVERITY",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "UNKNOWN_SEVERITY"
+                                            }
+                                        },
+                                        {
+                                            "key": "MEDIUM",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "MEDIUM"
+                                            }
+                                        },
+                                        {
+                                            "key": "HIGH",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "HIGH"
+                                            }
+                                        },
+                                        {
+                                            "key": "LOW",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "LOW"
+                                            }
+                                        },
+                                        {
+                                            "key": "NONE",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "NONE"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "bottom": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "95ae0f5430328d242b26381dbf7d1575c167848979e205219fb7b41311e1c536",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "b8e49cff-406a-4045-9aee-e07da8dc90b1",
+                    "displayName": "Total Unique Cyware IOCs (Last 24 Hours)",
+                    "description": "Total Unique Cyware IOCs in SecOps in last 24 Hours.",
+                    "chartDatasource": {
+                        "dashboardQuery": "4a84aaad-4e76-4db8-baad-cf46f55459a4",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Total Unique Cyware IOCs (Last 24 Hours)",
+                                "field": "all_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "e0906789cc12f15ebb4e7d9e6434434e92bfdd72ad8e45f531db57cd426de05a",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "01560ca5-cdef-4be5-9b0b-04bc95326c3e",
+                    "displayName": "Pending Manual Review Cyware IOCs",
+                    "description": "Number of Cyware IOCs with pending manual review.",
+                    "chartDatasource": {
+                        "dashboardQuery": "ffebc8ba-0f4a-4328-8419-ea4625807116",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Pending Manual Review Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d2ad1dcfc3a9c3be3c703512e200863aacd4d8ab293c49ebc4fd7ed6b3efa90a",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "BA340DFB-2739-4DF2-B110-35796D293A6A",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$manual_review = graph.additional.fields[\"manual_review\"]\r\n$manual_review = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "f562fcda-7785-409c-97a1-bd5b6a5844e6",
+                    "displayName": "Revoked Cyware IOCs",
+                    "description": "Revoked Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "7b204ef6-3de1-4c8f-9bb4-84c7b3fa64a9",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Revoked Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "6906e152728799328afa74ba145d3850d7b8ff33e717b0ff3934f30d6dbdcaff",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C746655F-A4EC-4DE1-A70E-62D6226F972A",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_revoked = graph.additional.fields[\"is_revoked\"]\r\n$is_revoked = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "1b6d0a99-a64f-411f-afae-040be7ceff30",
+                    "displayName": "Total Unique Cyware IOCs (Last 7 Days)",
+                    "description": "Total Unique Cyware IOCs in SecOps for last 7 days.",
+                    "chartDatasource": {
+                        "dashboardQuery": "958cbedf-8973-4253-b06a-635a570138ed",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Total Unique Cyware IOCs (Last 7 Days)",
+                                "field": "all_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "d4ee6946db6d389acb188d8c6a6ed18ac1baab7f208fa97b21ecbcfc193a4dc4",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "e8bb473b-aac9-4228-a599-a324ef77beb3",
+                    "displayName": "Actioned Cyware IOCs",
+                    "description": "Actioned Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "5daa97e6-a6bc-478d-b40e-c7677db789e2",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Actioned Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "8aaab2708dd1406e36e3332635e857fff062d08f7346e0321ed44f8431e23d6f",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C746655F-A4EC-4DE1-A70E-62D6226F972A",
+                                "displayName": "iocs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_actioned = graph.additional.fields[\"is_actioned\"]\r\n$is_actioned = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "2e36e213-ba9b-4f37-b291-3b3bacbcc832",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## ![Cyware Logo](https://cdn.cyware.com/logos/cyware-intel-exchange.png) Cyware Intel Exchange - Cyware IOCs Overview\n---\n#### This dashboard shows IOCs from Cyware Intel Exchange as normalized into the Google SecOps Entity Context Graph (ECG).\n",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "0ca9c5067d5f469dc08836593b4c1e1094a5d5d2acee773e9110d3ea6fe1d712"
+                },
+                {
+                    "name": "1a0fffc3-a12a-4f39-ada4-f7582d345b7b",
+                    "displayName": "Number of Cyware IOCs By IOC Type",
+                    "description": "Number of Cyware IOCs By IOC Type.",
+                    "chartDatasource": {
+                        "dashboardQuery": "56b28f00-d4a9-4b3f-b4e6-ae8b6efdea29",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "ioc_type"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=vKf(this.theme);b=qMf(b,VKf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "ipv4-addr",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "ipv4-addr"
+                                            }
+                                        },
+                                        {
+                                            "key": "domain-name",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "domain-name"
+                                            }
+                                        },
+                                        {
+                                            "key": "url",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "url"
+                                            }
+                                        },
+                                        {
+                                            "key": "file",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "file"
+                                            }
+                                        },
+                                        {
+                                            "key": "ipv6-addr",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "ipv6-addr"
+                                            }
+                                        },
+                                        {
+                                            "key": "autonomous-system",
+                                            "value": {
+                                                "color": "#923ef9",
+                                                "label": "autonomous-system"
+                                            }
+                                        },
+                                        {
+                                            "key": "email-addr",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "email-addr"
+                                            }
+                                        },
+                                        {
+                                            "key": "network-traffic",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "network-traffic"
+                                            }
+                                        },
+                                        {
+                                            "key": "windows-registry-key",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "windows-registry-key"
+                                            }
+                                        },
+                                        {
+                                            "key": "email-message",
+                                            "value": {
+                                                "color": "#6f7585",
+                                                "label": "email-message"
+                                            }
+                                        },
+                                        {
+                                            "key": "user-account",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "user-account"
+                                            }
+                                        },
+                                        {
+                                            "key": "x509-certificate",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "x509-certificate"
+                                            }
+                                        },
+                                        {
+                                            "key": "process",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "process"
+                                            }
+                                        },
+                                        {
+                                            "key": "mutex",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "mutex"
+                                            }
+                                        },
+                                        {
+                                            "key": "mac-addr",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "mac-addr"
+                                            }
+                                        },
+                                        {
+                                            "key": "artifact",
+                                            "value": {
+                                                "color": "#923ef9",
+                                                "label": "artifact"
+                                            }
+                                        },
+                                        {
+                                            "key": "software",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "software"
+                                            }
+                                        },
+                                        {
+                                            "key": "yara",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "yara"
+                                            }
+                                        },
+                                        {
+                                            "key": "directory",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "directory"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "bottom": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "1df1f727f33b624764c50c8dda1c54d6c258bb7eb803089b522b8942296cf6aa",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "cc80590f-e880-428f-ab16-8c8793ba2c38",
+                    "displayName": "Total Unique Cyware IOCs (Last 30 days)",
+                    "description": "Total Unique Cyware IOCs in SecOps for last 30 days.",
+                    "chartDatasource": {
+                        "dashboardQuery": "9f0f0443-e08e-4eaf-90db-6f0403bab149",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Total Unique Cyware IOCs (Last 30 days)",
+                                "field": "all_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "641e98bfb6ef1a1aa391db58f8299dcaa36df6bc9de7d90656749628b76d4fea",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "177dd9c1-7379-48f3-b88d-563fa37cece3",
+                    "displayName": "Number of Cyware IOCs By Risk Score",
+                    "description": "Number of Cyware IOCs By Risk Score.",
+                    "chartDatasource": {
+                        "dashboardQuery": "6e685abd-4840-4419-9ba6-d4b0782f01af",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "risk_category"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=KMf(this.theme);b=GOf(b,jNf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "None",
+                                            "value": {
+                                                "color": "#10a3b7",
+                                                "label": "None (0)"
+                                            }
+                                        },
+                                        {
+                                            "key": "High",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "High (70-100)"
+                                            }
+                                        },
+                                        {
+                                            "key": "Medium",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "Medium (30-69)"
+                                            }
+                                        },
+                                        {
+                                            "key": "Low",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "Low (1-29)"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "bottom": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "f5797d3cd1dade3a96cf8bb441386cf091b3e613220fb80081cc96ebc0d0f79f",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "12214eff-75af-4cb3-9d99-d6b8e56fc03a",
+                    "displayName": "Deprecated Cyware IOCs",
+                    "description": "Deprecated Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "38c8c818-4ae0-4464-a435-e7f4487cac84",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Deprecated Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "358ad5766fe5916cb3e780dc157e93b151885b23b6a2efe33d15e07adb071bdb",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "385C8ACD-5F6A-4C71-8B65-2AD1F494C0EA",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_deprecated = graph.additional.fields[\"is_deprecated\"]\r\n$is_deprecated = \"true\"\r\n$entity_id = graph.metadata.product_entity_id\r\nmatch:\r\n    $entity_id\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "5d0358e4-12f9-4c44-a8e4-39ab08c38629",
+                    "displayName": "Number of Cyware IOCs By TLP",
+                    "description": "Number of Cyware IOCs By TLP",
+                    "chartDatasource": {
+                        "dashboardQuery": "b2d5b4b3-fcfb-44b7-b440-5d281a86c54a",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "ctix_tlp"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=vKf(this.theme);b=qMf(b,VKf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "RED",
+                                            "value": {
+                                                "color": "#ec453b",
+                                                "label": "RED"
+                                            }
+                                        },
+                                        {
+                                            "key": "AMBER+STRICT",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "AMBER+STRICT"
+                                            }
+                                        },
+                                        {
+                                            "key": "CLEAR",
+                                            "value": {
+                                                "color": "#009886",
+                                                "label": "CLEAR"
+                                            }
+                                        },
+                                        {
+                                            "key": "NONE",
+                                            "value": {
+                                                "color": "#5350fb",
+                                                "label": "NONE"
+                                            }
+                                        },
+                                        {
+                                            "key": "AMBER",
+                                            "value": {
+                                                "color": "#e51f8f",
+                                                "label": "AMBER"
+                                            }
+                                        },
+                                        {
+                                            "key": "NA",
+                                            "value": {
+                                                "color": "#6f7585",
+                                                "label": "NA"
+                                            }
+                                        },
+                                        {
+                                            "key": "GREEN",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "GREEN"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "bottom": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "e58e0ad186b326b422390487efe91b3869459721d9713cf0d2554291d8b4af6c",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "22fccda1-707a-404b-bc26-8bf1aadf29b8",
+                    "displayName": "Timeline of IOCS Count By Severity",
+                    "description": "Timeline distribution of IOCS count by Severity",
+                    "chartDatasource": {
+                        "dashboardQuery": "97ee31de-61cf-4dbb-af8c-4ba39af69095",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesName": "MEDIUM",
+                                "seriesType": "LINE",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#eb730a"
+                                },
+                                "seriesUniqueValue": "MEDIUM"
+                            },
+                            {
+                                "seriesName": "HIGH",
+                                "seriesType": "LINE",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#ec453b"
+                                },
+                                "seriesUniqueValue": "HIGH"
+                            },
+                            {
+                                "seriesName": "NONE",
+                                "seriesType": "LINE",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#10a3b7"
+                                },
+                                "seriesUniqueValue": "NONE"
+                            },
+                            {
+                                "seriesName": "LOW",
+                                "seriesType": "LINE",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#4aa207"
+                                },
+                                "seriesUniqueValue": "LOW"
+                            },
+                            {
+                                "seriesName": "UNKNOWN_SEVERITY",
+                                "seriesType": "LINE",
+                                "encode": {
+                                    "x": "date",
+                                    "y": "count"
+                                },
+                                "dataLabel": {},
+                                "itemStyle": {
+                                    "color": "#1a73e8"
+                                },
+                                "seriesUniqueValue": "UNKNOWN_SEVERITY"
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "CATEGORY",
+                                "displayName": "Date"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE",
+                                "displayName": "Count"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "seriesColumn": [
+                            "severity"
+                        ],
+                        "groupingType": "Grouped"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "b312a15ae5311188b7b4f214e22491229f064d2cb21a7edf16d4213b60531f0b",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "b8f5a45a-30a5-4670-82e9-42c7b415ab0f",
+                    "displayName": "Reviewed Cyware IOCs",
+                    "description": "Reviewed Cyware IOCs",
+                    "chartDatasource": {
+                        "dashboardQuery": "ef27df48-b1f4-4f00-bb3a-1ff19f2acba3",
+                        "dataSources": [
+                            "ENTITY"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Reviewed Cyware IOCs",
+                                "field": "count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "298c5567790f7427496f9dca06c99c5630244849b46b5e9cac07cf1f900306c8",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "C746655F-A4EC-4DE1-A70E-62D6226F972A",
+                                "displayName": "IOCs drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "query": {
+                                        "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_reviewed = graph.additional.fields[\"is_reviewed\"]\r\n$is_reviewed = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $entityid\r\n"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ],
+            "dashboardQueries": [
+                {
+                    "name": "fe0f9e84-7fe6-4c3a-978a-606604c904b1",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$country = strings.coalesce(graph.entity.artifact.location.country_or_region, graph.entity.location.country_or_region)\r\n$country != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $country\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "4c7c608f705c94e041fe61ce1b1c6abfa05c935e146563969e375c4272e3cd8f"
+                },
+                {
+                    "name": "6e685abd-4840-4419-9ba6-d4b0782f01af",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n\r\n$score = graph.metadata.threat.risk_score\r\n$entityid = graph.metadata.product_entity_id\r\n\r\n$risk_category = if(graph.metadata.threat.risk_score = 0, \"None\", if(graph.metadata.threat.risk_score >= 1 and graph.metadata.threat.risk_score <= 29, \"Low\", if(graph.metadata.threat.risk_score >= 30 and graph.metadata.threat.risk_score <= 69, \"Medium\", if(graph.metadata.threat.risk_score >= 70, \"High\", \"Unknown\"))))\r\nmatch:\r\n    $risk_category\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "bb197fa4a7cfc70b0f5fe21b1c945e51e042036c3ec3a0517fa0d570607c5724"
+                },
+                {
+                    "name": "38c8c818-4ae0-4464-a435-e7f4487cac84",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_deprecated = graph.additional.fields[\"is_deprecated\"]\r\n$is_deprecated = \"true\"\r\n$entity_id = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entity_id)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "3bf2110a67ecdbb291e6e97d1fd5972daccb7991ef3d26ce63d5e70d765d4370"
+                },
+                {
+                    "name": "82f98ffb-ae1f-4e73-9728-f4a31267f9cd",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_false_positive = graph.additional.fields[\"is_false_positive\"]\r\n$is_false_positive = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "7dd44b6c0efbe533bbac3610e5de31c03ea0be48f5908b232fc1d8666aa1c4c8"
+                },
+                {
+                    "name": "97ee31de-61cf-4dbb-af8c-4ba39af69095",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n\r\n$date=timestamp.get_timestamp(graph.metadata.interval.start_time.seconds, \"%Y-%m-%d\")\r\n$entityid = graph.metadata.product_entity_id\r\n$severity = graph.metadata.threat.severity\r\nmatch:\r\n    $date, $severity\r\noutcome:\r\n    $count=count_distinct($entityid)\r\norder:\r\n    $date asc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "274f5dff693a4bc1170b26cab2b824b14b394f5cb99b9ce8e2a6edd65a39d5b1"
+                },
+                {
+                    "name": "10504694-f3a8-43d6-9b0e-50ebb0e5fee8",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\ngraph.metadata.threat.severity = \"MEDIUM\" or (graph.metadata.threat.risk_score >= 30 and graph.metadata.threat.risk_score <=69)\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "0c017316df639251dcca1f2e13dc9896a38efba24428b34bf6fe7962545c50e1"
+                },
+                {
+                    "name": "58b6e276-25c4-4830-bbb6-2eacf1cd65a3",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\ngraph.metadata.threat.severity = \"HIGH\" or (graph.metadata.threat.risk_score >= 70)\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "c3d428579ad99a623f782030f82bdc905e90734eb3a4c18bf963dff88d3061e8"
+                },
+                {
+                    "name": "958cbedf-8973-4253-b06a-635a570138ed",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $all_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "7"
+                        }
+                    },
+                    "etag": "efef1b51b7ea4a108ca41866c33b1f0f5a51188f4b25df069f45f6a8ad06b0b9"
+                },
+                {
+                    "name": "8ff9b60d-6bf7-48ef-824e-9c33ad45df4d",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$severity = graph.metadata.threat.severity\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $severity\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "e15f71c3e2c7f1ea413419027ab59ef2e2a18ef5427c5ed3aff778a58b617cfb"
+                },
+                {
+                    "name": "9f0f0443-e08e-4eaf-90db-6f0403bab149",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $all_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "HOUR",
+                            "startTimeVal": "24"
+                        }
+                    },
+                    "etag": "d25cebe8b149988354357f8ddf17000b5963724386505b612e62a407afa34615"
+                },
+                {
+                    "name": "4a84aaad-4e76-4db8-baad-cf46f55459a4",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $all_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "HOUR",
+                            "startTimeVal": "24"
+                        }
+                    },
+                    "etag": "d8e0a762850820fe420551aad6520778cb106adcd12eb72ec35559513ef6b598"
+                },
+                {
+                    "name": "56b28f00-d4a9-4b3f-b4e6-ae8b6efdea29",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$ioc_type = graph.additional.fields[\"ioc_type\"]\r\n$ioc_type != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $ioc_type\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    30",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "e9d1cbaaa351673c9d21f82399fa25baa7e5f8463f7e48f04d74086b497d7a49"
+                },
+                {
+                    "name": "7b204ef6-3de1-4c8f-9bb4-84c7b3fa64a9",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_revoked = graph.additional.fields[\"is_revoked\"]\r\n$is_revoked = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count =count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "f0707123d239824bbe9894c3cb3499ef51844531e3397399db677d12d09de917"
+                },
+                {
+                    "name": "5daa97e6-a6bc-478d-b40e-c7677db789e2",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_actioned = graph.additional.fields[\"is_actioned\"]\r\n$is_actioned = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "5bd013a4c1991cb2aa66164e9e52b31e13022f49c56886c336445679b96441d9"
+                },
+                {
+                    "name": "6d2db18b-8847-4407-bc31-bee424d620ae",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_whitelist = graph.additional.fields[\"is_whitelist\"]\r\n$is_whitelist = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "39ae665db5553cec369d51cbfb23733b8847c0b7b0b88c9436d47deff4bd0a73"
+                },
+                {
+                    "name": "b2d5b4b3-fcfb-44b7-b440-5d281a86c54a",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$ctix_tlp = strings.to_upper(graph.additional.fields[\"ctix_tlp\"])\r\n$ctix_tlp != \"\"\r\n$entityid = graph.metadata.product_entity_id\r\nmatch:\r\n    $ctix_tlp\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "0cc1d57180d1a9b1ddc549099defafccf55318a56caa94321589bb6efde634bc"
+                },
+                {
+                    "name": "ffebc8ba-0f4a-4328-8419-ea4625807116",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$manual_review = graph.additional.fields[\"manual_review\"]\r\n$manual_review = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "eb72a91ca5108777489553b866cafe494bdd4044394126be9f9504bf9826de8f"
+                },
+                {
+                    "name": "7e025232-4502-491e-bea3-abfe2f310e62",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $all_count = count_distinct($entityid)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "364c1fb7bdd8ad98d8d663f224034a110bd189024630b8ccb4276f9dd9ec61a1"
+                },
+                {
+                    "name": "ef27df48-b1f4-4f00-bb3a-1ff19f2acba3",
+                    "query": "graph.metadata.vendor_name = \"Cyware\"\r\ngraph.metadata.product_name = \"Cyware Intel Exchange\"\r\n$is_reviewed = graph.additional.fields[\"is_reviewed\"]\r\n$is_reviewed = \"true\"\r\n$entityid = graph.metadata.product_entity_id\r\noutcome:\r\n    $count = count_distinct($entityid)\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "862b3ffb791430820a95c32ab55fc8953851da593c3a01b1846b8f5042fc9445"
+                }
+            ]
+        }
+    ]
+}

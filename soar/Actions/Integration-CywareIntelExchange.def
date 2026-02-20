@@ -1,0 +1,143 @@
+{
+  "IsAvailableForCommunity": false,
+  "Identifier": "CywareIntelExchange",
+  "ShouldInstalledInSystem": false,
+  "Version": 1.0,
+  "DisplayName": "CywareIntelExchange",
+  "Description": "CywareIntelExchange - Google SecOps SOAR  integration",
+  "ImageBase64": "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",
+  "SvgImage": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"72\" height=\"72\" xml:space=\"preserve\" version=\"1.1\" viewBox=\"0 0 72 72\">   <image width=\"72\" height=\"72\" xlink:href=\"data:image/png;base64,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\"/> </svg>",
+  "IsCustom": true,
+  "PythonVersion": 3,
+  "IntegrationProperties": [
+    {
+      "IntegrationIdentifier": "CywareIntelExchange",
+      "PropertyName": "verify SSL",
+      "PropertyDescription": "Verify the SSL certificate.",
+      "PropertyDisplayName": "verify SSL",
+      "PropertyType": 0,
+      "IsMandatory": false,
+      "Value": "true",
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1771224576382,
+      "ModificationTimeUnixTimeInMs": 1771224576382
+    },
+    {
+      "IntegrationIdentifier": "CywareIntelExchange",
+      "PropertyName": "Access ID",
+      "PropertyDescription": "Access ID for cyware authentication",
+      "PropertyDisplayName": "Access ID",
+      "PropertyType": 3,
+      "IsMandatory": true,
+      "Value": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1771224576382,
+      "ModificationTimeUnixTimeInMs": 1771224576382
+    },
+    {
+      "IntegrationIdentifier": "CywareIntelExchange",
+      "PropertyName": "Base URL",
+      "PropertyDescription": "Base URL of the platform",
+      "PropertyDisplayName": "Base URL",
+      "PropertyType": 2,
+      "IsMandatory": true,
+      "Value": "",
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1771224576382,
+      "ModificationTimeUnixTimeInMs": 1771224576382
+    },
+    {
+      "IntegrationIdentifier": "CywareIntelExchange",
+      "PropertyName": "Secret Key",
+      "PropertyDescription": "Secret Key of the platform",
+      "PropertyDisplayName": "Secret Key",
+      "PropertyType": 3,
+      "IsMandatory": true,
+      "Value": null,
+      "Id": 0,
+      "CreationTimeUnixTimeInMs": 1771224576382,
+      "ModificationTimeUnixTimeInMs": 1771224576382
+    }
+  ],
+  "IntegrationSupportedActions": [
+    {
+      "Name": "Add IOCs to Allowed list",
+      "Description": "This action marks IOCs as allowed list (whitelist).",
+      "Id": 1320,
+      "CreationTimeUnixTimeInMs": 1771237525926,
+      "ModificationTimeUnixTimeInMs": 1771237525942
+    },
+    {
+      "Name": "Add Note to IOCs",
+      "Description": "This action adds a note to an existing threat data object.",
+      "Id": 1314,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Create Intel in Cyware Intel Exchange",
+      "Description": "This action creates a new intelligence record in Cyware Intel Exchange.",
+      "Id": 1315,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Get Allowed IOCs",
+      "Description": "This action retrieves IOCs that are marked as allowed (whitelisted).",
+      "Id": 1318,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Get IOC Details",
+      "Description": "This Action performs a lookup for threat data objects in Intel Exchange and retrieves the details of the objects, such as basic details, enriched data, and relations.",
+      "Id": 1317,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Manage Tags in IOCs",
+      "Description": "This action is used to perform add/remove tags operation on IOCs.",
+      "Id": 1319,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Mark IOCs False Positive",
+      "Description": "This action mark multiple IOCs as false positives in Intel Exchange",
+      "Id": 1316,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Ping",
+      "Description": "This action sends a request called ping to check the connection, and a successful response is called a pong response.",
+      "Id": 1313,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    },
+    {
+      "Name": "Remove IOCs from Allowed list",
+      "Description": "This action unmarks IOCs from allowed list (un_whitelist).",
+      "Id": 1312,
+      "CreationTimeUnixTimeInMs": 1771224576411,
+      "ModificationTimeUnixTimeInMs": 1771224576411
+    }
+  ],
+  "Categories": [],
+  "HasConnectors": false,
+  "DocumentationLink": null,
+  "IsCertified": false,
+  "UploaderFullName": "Trushit Vyas",
+  "PublishComment": null,
+  "UploaderEmail": "trushit.vyas@crestdata.ai",
+  "UploaderImageBase64": "",
+  "UploaderProfileLink": null,
+  "MinimumSystemVersion": 0.0,
+  "ProductionIntegrationIdentifier": null,
+  "Type": 0,
+  "Internal": false,
+  "Id": 0,
+  "CreationTimeUnixTimeInMs": 1771224576382,
+  "ModificationTimeUnixTimeInMs": 1771224576382
+}
