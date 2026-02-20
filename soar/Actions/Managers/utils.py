@@ -1,9 +1,7 @@
 from __future__ import annotations
 
 import json
-
 from typing import Any, Dict, List, Optional, Tuple
-from SiemplifyDataModel import EntityTypes
 
 from constants import INTEGRATION_NAME
 from cyware_exceptions import InvalidFormatException, InvalidIntegerException
@@ -131,7 +129,8 @@ def string_to_list(
                 cleaned_items.append(item[1:-1])
             elif '"' in item:
                 raise InvalidFormatException(
-                    f"{param_name} format is invalid. Remove stray quotes or quote the entire value."
+                    f"{param_name} format is invalid. Remove stray quotes or quote the entire "
+                    f"value."
                 )
             else:
                 cleaned_items.append(item)
@@ -174,40 +173,42 @@ def clean_params(params: Dict[str, Any]) -> Dict[str, Any]:
 def get_entities(siemplify: Any) -> List[str]:
     """Return the identifier of every target entity attached to the case."""
     entities = getattr(siemplify, "target_entities", []) or []
-    return [str(entity.identifier).strip() for entity in entities if getattr(entity, "identifier", None)]
+    return [
+        str(entity.identifier).strip() for entity in entities if getattr(entity, "identifier", None)
+    ]
+
 
 def get_entities_object(siemplify: Any) -> List[str]:
     """Return the list of every target entity attached to the case."""
-    return [
-        entity for entity in siemplify.target_entities
-    ]
+    return [entity for entity in siemplify.target_entities]
+
 
 def sanitize_url(url: str) -> str:
     """
     Sanitize URL by removing sensitive query parameters like AccessID, Signature, and Expires.
-    
+
     Args:
         url (str): The URL to sanitize
-        
+
     Returns:
         str: Sanitized URL with sensitive parameters masked
     """
     try:
-        from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
-        
+        from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+
         parsed = urlparse(url)
         query_params = parse_qs(parsed.query)
-        
+
         # List of sensitive parameters to mask
-        sensitive_params = ['AccessID', 'Signature', 'Expires', 'access_id', 'signature', 'expires']
-        
+        sensitive_params = ["AccessID", "Signature", "Expires", "access_id", "signature", "expires"]
+
         # Remove sensitive parameters
         sanitized_params = {k: v for k, v in query_params.items() if k not in sensitive_params}
-        
+
         # Add masked indicators for removed params
         if any(param in query_params for param in sensitive_params):
-            sanitized_params['[REDACTED]'] = ['Sensitive authentication parameters hidden']
-        
+            sanitized_params["[REDACTED]"] = ["Sensitive authentication parameters hidden"]
+
         # Reconstruct URL
         new_query = urlencode(sanitized_params, doseq=True)
         sanitized = urlunparse((
@@ -216,10 +217,10 @@ def sanitize_url(url: str) -> str:
             parsed.path,
             parsed.params,
             new_query,
-            parsed.fragment
+            parsed.fragment,
         ))
-        
+
         return sanitized
     except Exception:
         # If sanitization fails, return a generic message
-        return url.split('?')[0] + '?[REDACTED]'
+        return url.split("?")[0] + "?[REDACTED]"

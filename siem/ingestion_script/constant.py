@@ -16,6 +16,8 @@
 
 import immutabledict
 
+USER_AGENT_NAME = "cyware/intel-exchange (GoogleSecopsSIEM/1.0.0)"
+
 # ENVIRONMENT VARIABLES CONSTANTS
 ENV_TENANT_NAME = "CYWARE_TENANT_NAME"
 ENV_BASE_URL = "CYWARE_BASE_URL"

@@ -10,13 +10,13 @@ from api_manager import APIManager
 from constants import (
     ADD_NOTE_TO_IOC_SCRIPT_NAME,
     COMMON_ACTION_ERROR_MESSAGE,
+    NO_ENTITIES_ERROR,
+    NO_VALID_IOC_ERROR,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR,
-    NO_VALID_IOC_ERROR
 )
 from cyware_exceptions import CywareException
-from utils import get_integration_params, get_entities
+from utils import get_entities, get_integration_params
 
 
 @output_handler
@@ -32,11 +32,12 @@ def main():
 
     try:
         base_url, access_id, secret_key, verify_ssl = get_integration_params(siemplify)
-        ioc_values = get_entities(siemplify);
+        ioc_values = get_entities(siemplify)
         note = siemplify.extract_action_param("Note", print_value=False, is_mandatory=True)
         note_type = siemplify.extract_action_param("Note Type", print_value=True, is_mandatory=True)
         is_json_str = siemplify.extract_action_param(
-            "Is the Note in Json format", print_value=True, default_value="false")
+            "Is the Note in Json format", print_value=True, default_value="false"
+        )
 
         siemplify.LOGGER.info("----------------- Main - Started -----------------")
 
@@ -61,7 +62,8 @@ def main():
         missing_iocs = [value for value in ioc_values if value not in ioc_lookup]
         if missing_iocs:
             siemplify.LOGGER.info(
-                f"Indicator(s) not found on Cyware Intel Exchange and will be skipped: {', '.join(missing_iocs)}"
+                f"Indicator(s) not found on Cyware Intel Exchange and will be skipped: "
+                f"{', '.join(missing_iocs)}"
             )
         valid_iocs = [value for value in ioc_values if value in ioc_lookup]
 
@@ -80,19 +82,14 @@ def main():
 
             try:
                 response = cyware_manager.add_note_to_indicator(
-                    object_id=indicator_id,
-                    text=note,
-                    note_type=note_type,
-                    is_json=is_json
+                    object_id=indicator_id, text=note, note_type=note_type, is_json=is_json
                 )
 
-                indicator_responses.append(
-                    {
-                        "indicator": indicator_value,
-                        "indicator_id": indicator_id,
-                        "response": response or {},
-                    }
-                )
+                indicator_responses.append({
+                    "indicator": indicator_value,
+                    "indicator_id": indicator_id,
+                    "response": response or {},
+                })
 
                 if response:
                     note_id = response.get("id", "N/A")
@@ -102,18 +99,21 @@ def main():
                         "note_id": note_id,
                     })
                     siemplify.LOGGER.info(
-                        f"Successfully added note to IOC '{indicator_value}' (ID: {indicator_id}). Note ID: {note_id}"
+                        f"Successfully added note to IOC '{indicator_value}' (ID: {indicator_id}). "
+                        f"Note ID: {note_id}"
                     )
                 else:
                     failed_indicators.append(indicator_value)
                     siemplify.LOGGER.warning(
-                        f"Add note API returned empty response for IOC '{indicator_value}' (ID: {indicator_id})."
+                        f"Add note API returned empty response for IOC '{indicator_value}' "
+                        f"(ID: {indicator_id})."
                     )
 
             except Exception as inner_error:
                 failed_indicators.append(indicator_value)
                 siemplify.LOGGER.error(
-                    f"Failed to Add Note to IOCs '{indicator_value}' (ID: {indicator_id}). Error: {inner_error}"
+                    f"Failed to Add Note to IOCs '{indicator_value}' (ID: {indicator_id}). "
+                    f"Error: {inner_error}"
                 )
                 siemplify.LOGGER.exception(inner_error)
 
@@ -122,11 +122,14 @@ def main():
 
         if successful_indicators:
             output_message = (
-                f"Successfully added notes to {len(successful_indicators)} IOC(s). Skipped {len(missing_iocs)} IOC(s) since they are not found on Cyware Intel Exchange"
+                f"Successfully added notes to {len(successful_indicators)} IOC(s). "
+                f"Skipped {len(missing_iocs)} IOC(s) since they are not found on "
+                f"Cyware Intel Exchange"
             )
             if failed_indicators:
                 output_message += (
-                    f" Failed to add notes to {len(failed_indicators)} IOC(s): {', '.join(failed_indicators)}."
+                    f" Failed to add notes to {len(failed_indicators)} IOC(s): "
+                    f"{', '.join(failed_indicators)}."
                 )
             result_value = RESULT_VALUE_TRUE
         else:
@@ -142,11 +145,9 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     except json.JSONDecodeError:
-        output_message = (
-            "Note is marked as JSON but is not valid JSON. Enter valid JSON."
-        )
+        output_message = "Note is marked as JSON but is not valid JSON. Enter valid JSON."
         result_value = RESULT_VALUE_FALSE
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
@@ -165,6 +166,7 @@ def main():
         siemplify.LOGGER.info(f"result_value: {result_value}")
         siemplify.LOGGER.info(f"Output Message: {output_message}")
         siemplify.end(output_message, result_value, status)
+
 
 if __name__ == "__main__":
     main()

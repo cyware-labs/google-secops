@@ -5,7 +5,7 @@ rule cyware_intel_exchange_brute_force_attempt {
     rule_name = "Cyware Intelligence - Brute Force Login Detection"
     description = "Detects multiple failed login attempts from IPs flagged by Cyware threat intelligence."
     severity = "High"
-    priority = "High"
+    priority = "Critical"
     mitre_attack_tactic = "Credential Access"
     mitre_attack_technique = "T1110 - Brute Force"
     tags = "cloud security, threat intelligence, cyware intel exchange"

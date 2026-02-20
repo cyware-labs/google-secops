@@ -2,27 +2,27 @@ from __future__ import annotations
 
 import json
 import time
+from typing import Any, Dict, List
 
 from ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_FAILED
 from SiemplifyAction import SiemplifyAction
 from SiemplifyUtils import output_handler
 
-from typing import Any, Dict, List
-
 from api_manager import APIManager
 from constants import (
     COMMON_ACTION_ERROR_MESSAGE,
     CREATE_INTEL_IN_CTIX_SCRIPT_NAME,
+    NO_ENTITIES_ERROR,
     QUICK_INTEL_STATUS_FAILURE_STATUSES,
     QUICK_INTEL_STATUS_MAX_ATTEMPTS,
     QUICK_INTEL_STATUS_POLL_INTERVAL,
     QUICK_INTEL_STATUS_SUCCESS_STATUSES,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR,
 )
 from cyware_exceptions import CywareException
-from utils import get_integration_params, get_entities, string_to_list, validate_integer_param
+from utils import get_entities, get_integration_params, string_to_list, validate_integer_param
+
 
 @output_handler
 def main():
@@ -47,7 +47,7 @@ def main():
         tags = siemplify.extract_action_param("Tags", print_value=True)
         valid_until = siemplify.extract_action_param("Deprecates After", print_value=True)
         description = siemplify.extract_action_param("Description", print_value=True)
-        
+
         siemplify.LOGGER.info("----------------- Main - Started -----------------")
 
         if description:
@@ -63,7 +63,7 @@ def main():
             result_value = RESULT_VALUE_TRUE
             status = EXECUTION_STATE_COMPLETED
             return
-        
+
         if len(title.strip()) > 100:
             output_message = "Title must not exceed 100 characters."
             result_value = RESULT_VALUE_FALSE
@@ -71,7 +71,7 @@ def main():
             return
 
         tags_list = string_to_list(tags, strip_quotes=True, param_name="Tags") if tags else []
-        
+
         confidence = None
         if metadata_confidence_score:
             confidence = validate_integer_param(
@@ -100,7 +100,6 @@ def main():
         failed_indicators: List[Dict[str, str]] = []
 
         for indicator_value in ioc_values:
-
             metadata_payload: Dict[str, Any] = {
                 "tlp": resolved_tlp,
                 "default_marking_definition": resolved_tlp,
@@ -171,24 +170,19 @@ def main():
                         time.sleep(QUICK_INTEL_STATUS_POLL_INTERVAL)
                 else:
                     siemplify.LOGGER.warning(
-                        f"Task ID missing in creation response for '{indicator_value}'. Skipping status check."
+                        f"Task ID missing in creation response for '{indicator_value}'. "
+                        f"Skipping status check."
                     )
 
-                indicator_results.append(
-                    {
-                        "indicator": indicator_value,
-                        "creation_response": creation_response,
-                        "status_response": status_response,
-                    }
-                )
+                indicator_results.append({
+                    "indicator": indicator_value,
+                    "creation_response": creation_response,
+                    "status_response": status_response,
+                })
 
             except Exception as inner_error:
-                failed_indicators.append(
-                    {"indicator": indicator_value, "error": str(inner_error)}
-                )
-                siemplify.LOGGER.error(
-                    f"Failed to process IOC '{indicator_value}': {inner_error}"
-                )
+                failed_indicators.append({"indicator": indicator_value, "error": str(inner_error)})
+                siemplify.LOGGER.error(f"Failed to process IOC '{indicator_value}': {inner_error}")
                 siemplify.LOGGER.exception(inner_error)
 
         if indicator_results:
@@ -198,12 +192,11 @@ def main():
         failure_count = len(failed_indicators)
 
         if success_count:
-            output_message = (
-                f"Successfully created intel in CTIX for {success_count} IOC(s)."
-            )
+            output_message = f"Successfully created intel in CTIX for {success_count} IOC(s)."
             if failure_count:
                 failed_values = ", ".join(
-                    f"{failure.get('indicator', 'N/A')} (Reason: {failure.get('error', 'Unknown error')})"
+                    f"{failure.get('indicator', 'N/A')} "
+                    f"(Reason: {failure.get('error', 'Unknown error')})"
                     for failure in failed_indicators
                 )
                 output_message += (
@@ -214,7 +207,8 @@ def main():
             output_message = "Failed to create intel in CTIX for all provided IOCs."
             if failure_count:
                 failed_values = ", ".join(
-                    f"{failure.get('indicator', 'N/A')} (Reason: {failure.get('error', 'Unknown error')})"
+                    f"{failure.get('indicator', 'N/A')} "
+                    f"(Reason: {failure.get('error', 'Unknown error')})"
                     for failure in failed_indicators
                 )
                 output_message += f" Affected IOC(s): {failed_values}."
@@ -234,7 +228,7 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.result.add_result_json(json_results)
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")

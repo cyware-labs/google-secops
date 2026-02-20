@@ -6,7 +6,7 @@ rule cyware_intel_exchange_malicious_ip_detection {
     rule_name = "Cyware Intelligence - Malicious IP Communication Detection"
     description = "Detects network traffic to/from IP addresses identified as malicious by Cyware."
     severity = "High"
-    priority = "High"
+    priority = "Critical"
     mitre_attack_tactic = "Command and Control, Initial Access"
     mitre_attack_technique = "T1071 - Application Layer Protocol, T1190 - Exploit Public-Facing Application"
     tags = "cloud security, threat intelligence, cyware intel exchange"

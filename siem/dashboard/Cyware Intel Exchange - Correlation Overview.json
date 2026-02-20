@@ -2,7 +2,7 @@
     "dashboards": [
         {
             "dashboard": {
-                "name": "cdbc5818-6c3f-48c2-a547-0c9671133091",
+                "name": "efe06885-3712-42bf-8b51-c226c7631208",
                 "displayName": "Cyware Intel Exchange - Correlation Overview",
                 "description": "The Correlation dashboard provides a consolidated view of Cyware Intel Exchange Indicators of Compromise (IOCs) and their relationships with security events across multiple data sources. It enables visualization and correlation of threat intelligence with observed activity, helping analysts quickly identify patterns and validate threats.",
                 "definition": {
@@ -21,15 +21,15 @@
                             ],
                             "displayName": "Global Time Filter",
                             "chartIds": [
-                                "c85ce71e-bb69-4d3a-b64b-bbd27709233b",
-                                "4f519b3d-a4be-42bb-9b9b-31fcbaa71dc6",
-                                "b0659385-3b96-4613-b0c0-e3eb0dbc7100",
-                                "3ac2894c-6728-41ed-9874-d5917726cca8",
-                                "14fba74c-e273-42ee-b2ab-627973ee4eb7",
-                                "aaba4563-371e-4adf-aa86-ab158e8a255c",
-                                "a13a7569-ebf0-4927-82df-24fedad0d9a1",
-                                "f6dc0618-fa59-4c84-a286-f4a07a76f74d",
-                                "eb8a7625-7e6b-4c9c-b9f5-6934647a29de"
+                                "bd052416-4d4c-4b52-a875-aecff917223c",
+                                "91ae3026-9245-4eaf-8570-4eec1e95ffac",
+                                "8a2fae3c-62c4-4c27-90a7-596dbd7cce00",
+                                "e29854e6-b1c4-459b-af37-a93a1655a205",
+                                "aba1606d-48ea-40b8-bb94-ae575947fa21",
+                                "319a951f-e1dc-4390-834b-d438bec474a9",
+                                "3489e01d-6c45-4bbd-8e98-58bc7a4357dd",
+                                "3eb479ca-7c53-4173-8d9a-c7f45c93100c",
+                                "49164f61-8af5-4143-a9e4-c04f0b3dd950"
                             ],
                             "isStandardTimeRangeFilter": true,
                             "isStandardTimeRangeFilterEnabled": true
@@ -37,7 +37,7 @@
                     ],
                     "charts": [
                         {
-                            "dashboardChart": "f6dc0618-fa59-4c84-a286-f4a07a76f74d",
+                            "dashboardChart": "3eb479ca-7c53-4173-8d9a-c7f45c93100c",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 48,
@@ -49,7 +49,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "14fba74c-e273-42ee-b2ab-627973ee4eb7",
+                            "dashboardChart": "aba1606d-48ea-40b8-bb94-ae575947fa21",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 24,
@@ -61,7 +61,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "4f519b3d-a4be-42bb-9b9b-31fcbaa71dc6",
+                            "dashboardChart": "91ae3026-9245-4eaf-8570-4eec1e95ffac",
                             "chartLayout": {
                                 "startX": 48,
                                 "spanX": 48,
@@ -73,7 +73,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "3ac2894c-6728-41ed-9874-d5917726cca8",
+                            "dashboardChart": "e29854e6-b1c4-459b-af37-a93a1655a205",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 96,
@@ -85,7 +85,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "4f8ac83b-7167-4c8c-b702-17625a36a0a3",
+                            "dashboardChart": "d5897984-917a-4c39-83d5-5108fe28f99a",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 96,
@@ -94,7 +94,7 @@
                             }
                         },
                         {
-                            "dashboardChart": "c85ce71e-bb69-4d3a-b64b-bbd27709233b",
+                            "dashboardChart": "bd052416-4d4c-4b52-a875-aecff917223c",
                             "chartLayout": {
                                 "startX": 48,
                                 "spanX": 48,
@@ -106,7 +106,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "b0659385-3b96-4613-b0c0-e3eb0dbc7100",
+                            "dashboardChart": "8a2fae3c-62c4-4c27-90a7-596dbd7cce00",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 96,
@@ -118,7 +118,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "b528ee4c-6ca6-470f-8856-1b8ab5de93ca",
+                            "dashboardChart": "e2ca8e3a-5392-414e-be6d-0a30c5dc3188",
                             "chartLayout": {
                                 "startX": 24,
                                 "spanX": 24,
@@ -127,7 +127,7 @@
                             }
                         },
                         {
-                            "dashboardChart": "a43fdd5b-9360-4a3f-84e4-ea5749e54c33",
+                            "dashboardChart": "7d4a1c9c-9d94-476c-8cc5-0b28b1292ed8",
                             "chartLayout": {
                                 "startX": 48,
                                 "spanX": 24,
@@ -136,7 +136,7 @@
                             }
                         },
                         {
-                            "dashboardChart": "94bf2848-4363-4d04-9778-97b8896e27f2",
+                            "dashboardChart": "39c74b88-5043-48d8-b2ef-6c34034b391c",
                             "chartLayout": {
                                 "startX": 72,
                                 "spanX": 24,
@@ -145,7 +145,7 @@
                             }
                         },
                         {
-                            "dashboardChart": "eb8a7625-7e6b-4c9c-b9f5-6934647a29de",
+                            "dashboardChart": "49164f61-8af5-4143-a9e4-c04f0b3dd950",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 48,
@@ -157,7 +157,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "a13a7569-ebf0-4927-82df-24fedad0d9a1",
+                            "dashboardChart": "3489e01d-6c45-4bbd-8e98-58bc7a4357dd",
                             "chartLayout": {
                                 "startX": 48,
                                 "spanX": 48,
@@ -169,7 +169,7 @@
                             ]
                         },
                         {
-                            "dashboardChart": "aaba4563-371e-4adf-aa86-ab158e8a255c",
+                            "dashboardChart": "319a951f-e1dc-4390-834b-d438bec474a9",
                             "chartLayout": {
                                 "startX": 0,
                                 "spanX": 48,
@@ -183,16 +183,16 @@
                     ]
                 },
                 "type": "CUSTOM",
-                "etag": "6018a2c24350a95dd90310e7a9c0712f7b1f8bec8d509da7263ff69928be4165",
+                "etag": "d85b4f59c2c641943f28375b12212c51ab8eb0221860fb9b34135548ef43d20b",
                 "access": "DASHBOARD_PRIVATE"
             },
             "dashboardCharts": [
                 {
-                    "name": "a13a7569-ebf0-4927-82df-24fedad0d9a1",
-                    "displayName": "Number of Cyware IOC Matches by IOC Type",
-                    "description": "Number of Cyware IOC Matches by IOC Type",
+                    "name": "aba1606d-48ea-40b8-bb94-ae575947fa21",
+                    "displayName": "Unique IOC Matches",
+                    "description": "Number of Unique IOC Matches in SecOps",
                     "chartDatasource": {
-                        "dashboardQuery": "4007b4ca-7385-4d3e-bd86-6eb17c8ab12c",
+                        "dashboardQuery": "9bb4eb47-148c-48f9-83b0-bfe7c816794c",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -200,38 +200,13 @@
                     "visualization": {
                         "series": [
                             {
-                                "seriesType": "PIE",
-                                "encode": {
-                                    "value": "count",
-                                    "itemName": "ioc_type"
-                                },
-                                "dataLabel": {
-                                    "show": true
-                                },
-                                "radius": [
-                                    "0%",
-                                    "70%"
-                                ],
-                                "itemStyle": {
-                                    "color": "b=>{const {map:c}=KMf(this.theme);b=GOf(b,jNf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
-                                },
-                                "itemColors": {
-                                    "colors": [
-                                        {
-                                            "key": "IOC_TYPE_DOMAIN",
-                                            "value": {
-                                                "color": "#1a73e8",
-                                                "label": "IOC_TYPE_DOMAIN"
-                                            }
-                                        },
-                                        {
-                                            "key": "IOC_TYPE_IP",
-                                            "value": {
-                                                "color": "#eb730a",
-                                                "label": "IOC_TYPE_IP"
-                                            }
-                                        }
-                                    ]
+                                "seriesType": "TEXT",
+                                "label": "Unique IOC Matches",
+                                "field": "ip_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
                                 }
                             }
                         ],
@@ -247,22 +222,65 @@
                         ],
                         "legends": [
                             {
-                                "top": 12,
                                 "legendOrient": "HORIZONTAL"
                             }
                         ],
                         "groupingType": "Off"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "06b7ecd15b1b1d6fd2a35b11fb9c1ace6149fda07547f1f93520d190a0d4083c",
+                    "etag": "570199cd1f9f4c617629f5db0ce53f884a36f65a91741cd26d37cc156a2e286b",
                     "drillDownConfig": {}
                 },
                 {
-                    "name": "4f519b3d-a4be-42bb-9b9b-31fcbaa71dc6",
-                    "displayName": "Top 10 IOC Values",
-                    "description": "Top 10 IOC Values for ioc matches by its frequency.",
+                    "name": "7d4a1c9c-9d94-476c-8cc5-0b28b1292ed8",
+                    "displayName": "Unique IOC Matches (Last 7 Days)",
+                    "description": "Number of Unique IOC Matches in SecOps for Last 7 Days.",
                     "chartDatasource": {
-                        "dashboardQuery": "dbdc3300-7283-49e6-8f0a-0d6b1602bb80",
+                        "dashboardQuery": "9fdf11ce-0223-404e-b984-7b7586ffaf6d",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Unique IOC Matches (Last 7 Days)",
+                                "field": "ip_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "c31d1b8e6fd3bd145b686f4053a779ad01a4cc9597b945e4a71fcee714e43ea0",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "e29854e6-b1c4-459b-af37-a93a1655a205",
+                    "displayName": "IOCs Matched",
+                    "description": "Details of Matched IOCs. Results are limited to 10000 IOC matches.",
+                    "chartDatasource": {
+                        "dashboardQuery": "1fbb989a-e98e-4998-9a9e-e634d0c8ae8c",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -293,19 +311,47 @@
                                 "header": "IOC Type"
                             },
                             {
-                                "field": "count",
-                                "header": "Count"
+                                "field": "classification",
+                                "header": "Severity"
+                            },
+                            {
+                                "field": "category",
+                                "header": "Categories"
+                            },
+                            {
+                                "field": "latitude",
+                                "header": "Latitude"
+                            },
+                            {
+                                "field": "longitude",
+                                "header": "Longitude"
+                            },
+                            {
+                                "field": "match_bucket",
+                                "header": "IOC Match Date"
+                            },
+                            {
+                                "field": "country",
+                                "header": "Country"
+                            },
+                            {
+                                "field": "confidence",
+                                "header": "confidence"
+                            },
+                            {
+                                "field": "hostname",
+                                "header": "Hostname"
                             }
                         ],
                         "groupingType": "Off"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "8359946c29a3499c61d59d3a9a0dbe3918a0fd15000125f50d61ef60394ce1d6",
+                    "etag": "fe9e4fd4502b2b87477ffdd861a6065130f685c7e900e9295c2dc56bfd93a0c3",
                     "drillDownConfig": {
                         "leftDrillDowns": [
                             {
-                                "id": "25E59845-BF85-499B-80E3-CC73A7260E7A",
-                                "displayName": "IOC drilldown",
+                                "id": "6A6A35C2-C76F-4E7B-8864-753A798AD03B",
+                                "displayName": "IOC match drilldown",
                                 "customSettings": {
                                     "newTab": true,
                                     "leftClickColumn": "ioc_val",
@@ -318,11 +364,81 @@
                     }
                 },
                 {
-                    "name": "94bf2848-4363-4d04-9778-97b8896e27f2",
+                    "name": "3489e01d-6c45-4bbd-8e98-58bc7a4357dd",
+                    "displayName": "Number of IOC Matches by IOC Type",
+                    "description": "Number of IOC Matches by IOC Type",
+                    "chartDatasource": {
+                        "dashboardQuery": "c7335e7c-c7ca-4ed3-9a10-e8443ca26056",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "PIE",
+                                "encode": {
+                                    "value": "count",
+                                    "itemName": "ioc_type"
+                                },
+                                "dataLabel": {
+                                    "show": true
+                                },
+                                "radius": [
+                                    "0%",
+                                    "70%"
+                                ],
+                                "itemStyle": {
+                                    "color": "b=>{const {map:c}=KMf(this.theme);b=GOf(b,jNf(this.form.controls.seriesConfig.getRawValue()),a);a=b.nextColorIndex;let d;return(d=\nc.get(b.color))!=null?d:b.color}"
+                                },
+                                "itemColors": {
+                                    "colors": [
+                                        {
+                                            "key": "IOC_TYPE_IP",
+                                            "value": {
+                                                "color": "#eb730a",
+                                                "label": "IOC_TYPE_IP"
+                                            }
+                                        },
+                                        {
+                                            "key": "IOC_TYPE_DOMAIN",
+                                            "value": {
+                                                "color": "#1a73e8",
+                                                "label": "IOC_TYPE_DOMAIN"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "top": 12,
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "e0120de90d54d8cfdf3072dead4587663b8a4c75d4e387de1f6bb27102f19cce",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "39c74b88-5043-48d8-b2ef-6c34034b391c",
                     "displayName": "Unique IOC Matches (Last 24 Hours)",
                     "description": "Number of Unique IOC Matches in SecOps for Last 24 Hours.",
                     "chartDatasource": {
-                        "dashboardQuery": "ea59858c-90a6-4c89-b224-28d446ac659a",
+                        "dashboardQuery": "e022e1c2-f5fd-4a28-87e1-6c2af999e457",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -358,15 +474,15 @@
                         "groupingType": "Off"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "6f9626bda48976d98a5617471bca1a5841388d5b02902ce92143cf00ff916f64",
+                    "etag": "0e3e8b34a89a5448219068711ef678058b29f6f2623212fb0fbce4198a02f8bc",
                     "drillDownConfig": {}
                 },
                 {
-                    "name": "aaba4563-371e-4adf-aa86-ab158e8a255c",
-                    "displayName": "Number of Cyware IOCs By Risk Score",
-                    "description": "Number of Cyware IOCs By Risk Score",
+                    "name": "319a951f-e1dc-4390-834b-d438bec474a9",
+                    "displayName": "Number of IOCs Matches By Risk Score",
+                    "description": "Number of IOCs Matches By Risk Score",
                     "chartDatasource": {
-                        "dashboardQuery": "e440a105-e5d4-491d-9c08-759e802b76ba",
+                        "dashboardQuery": "2f72bc87-5e11-4e03-b27d-2dd62cf7e9e0",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -392,17 +508,17 @@
                                 "itemColors": {
                                     "colors": [
                                         {
-                                            "key": "Low",
-                                            "value": {
-                                                "color": "#4aa207",
-                                                "label": "Low (1-29)"
-                                            }
-                                        },
-                                        {
                                             "key": "High",
                                             "value": {
                                                 "color": "#ec453b",
                                                 "label": "High (70-100)"
+                                            }
+                                        },
+                                        {
+                                            "key": "Low",
+                                            "value": {
+                                                "color": "#4aa207",
+                                                "label": "Low (1-29)"
                                             }
                                         },
                                         {
@@ -442,70 +558,15 @@
                         "groupingType": "Off"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "d8a422e1931e2e6752a0c4bb8d9173bd7e2eefd89181b227330237d8836d054d",
+                    "etag": "abe8b11beb130f3468c17c9bbaef23c709b6bcd5579ed6d72548fe4b77c79d1d",
                     "drillDownConfig": {}
                 },
                 {
-                    "name": "4f8ac83b-7167-4c8c-b702-17625a36a0a3",
-                    "displayName": "markdown",
-                    "visualization": {
-                        "markdown": {
-                            "content": "## ![Cyware Logo](https://cdn.cyware.com/logos/cyware-intel-exchange.png) Cyware Intel Exchange - Correlation Overview\n---\nThe Correlation dashboard is designed to identify relationships of Cyware Intel Exchange IOCs and events from other sources.\n\n**IOC Match Visibility**: Monitor IOCs matched in your environment",
-                            "properties": {
-                                "backgroundColor": "transparent"
-                            }
-                        }
-                    },
-                    "tileType": "TILE_TYPE_MARKDOWN",
-                    "etag": "5cdfef0942c965b611133a66ace19e63f81f7441efa14efd0fbff6d631a4bf65"
-                },
-                {
-                    "name": "b0659385-3b96-4613-b0c0-e3eb0dbc7100",
-                    "displayName": "IOCs Geolocation Overview",
-                    "description": "IOCs Geolocation Overview",
-                    "chartDatasource": {
-                        "dashboardQuery": "69aef190-3c2c-41a2-b6eb-1dac3e0d9779",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "series": [
-                            {
-                                "seriesType": "MAP",
-                                "encode": {},
-                                "dataLabel": {}
-                            }
-                        ],
-                        "googleMapsConfig": {
-                            "dataSettings": {
-                                "latitudeColumn": "max_latitude",
-                                "longitudeColumn": "max_longitude",
-                                "countColumn": "count"
-                            },
-                            "plotMode": "PLOT_MODE_BOTH",
-                            "mapPosition": {
-                                "fitData": true,
-                                "latitudeValue": 37.421995,
-                                "longitudeValue": -122.084092,
-                                "zoomScaleValue": 3.078680116503973
-                            },
-                            "pointSettings": {
-                                "pointSizeType": "POINT_SIZE_TYPE_FIXED",
-                                "color": "#009886"
-                            }
-                        }
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "e3a3d0682bc8b2112e396e2738bdc7318e4355f3e753097aceb7970d9b58ab9f",
-                    "drillDownConfig": {}
-                },
-                {
-                    "name": "b528ee4c-6ca6-470f-8856-1b8ab5de93ca",
+                    "name": "e2ca8e3a-5392-414e-be6d-0a30c5dc3188",
                     "displayName": "Unique IOC Matches (Last 30 Days)",
                     "description": "Number of Unique IOC Matches in SecOps for Last 30 Days.",
                     "chartDatasource": {
-                        "dashboardQuery": "9db23985-34b4-4c61-bd5e-11bf8fc9a607",
+                        "dashboardQuery": "d2569437-aaa1-40b9-a021-008994cb14a8",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -541,15 +602,244 @@
                         "groupingType": "Off"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "b9ecf70d8d6fc4ff27f19ba57b60d647c8ebeead1a7f0549094f59d39b85c46f",
+                    "etag": "94cef9cb90f7832b08a3f8ecb45ff14245fd336275e49e63d4aeeabe7c3bddb4",
                     "drillDownConfig": {}
                 },
                 {
-                    "name": "eb8a7625-7e6b-4c9c-b9f5-6934647a29de",
+                    "name": "3eb479ca-7c53-4173-8d9a-c7f45c93100c",
+                    "displayName": "High Severity IOC Matches",
+                    "description": "Number of IOC Matches with High severity or risk score >= 70.",
+                    "chartDatasource": {
+                        "dashboardQuery": "f2230e46-2230-4b57-beff-400c882b731e",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "High Severity IOC Matches",
+                                "field": "high_severity_ioc_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE_AND_PERCENTAGE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#ec453b"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7af60508c2b855841148df7c1f366cc0da3b9a52dd36424780f1f6f327b98c93",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "91ae3026-9245-4eaf-8570-4eec1e95ffac",
+                    "displayName": "Top 10 IOC Values",
+                    "description": "Top 10 IOC Values for ioc matches by its frequency.",
+                    "chartDatasource": {
+                        "dashboardQuery": "89a9b582-c02e-4ae7-80b1-c658ea47c8d5",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "columnDefs": [
+                            {
+                                "field": "ioc_val",
+                                "header": "IOC Value"
+                            },
+                            {
+                                "field": "ioc_type",
+                                "header": "IOC Type"
+                            },
+                            {
+                                "field": "count",
+                                "header": "Count"
+                            }
+                        ],
+                        "groupingType": "Off"
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "1356551060dac01ed782384e23aa1e07b78709dd78256ae0122818ac5545cf12",
+                    "drillDownConfig": {
+                        "leftDrillDowns": [
+                            {
+                                "id": "25E59845-BF85-499B-80E3-CC73A7260E7A",
+                                "displayName": "IOC drilldown",
+                                "customSettings": {
+                                    "newTab": true,
+                                    "leftClickColumn": "ioc_val",
+                                    "query": {
+                                        "query": "(\r\n    ${ioc_type} = \"IOC_TYPE_DOMAIN\"\r\n    and (target.hostname=${ioc_val} OR network.dns.questions.name=${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_IP\"\r\n    and (target.ip = ${ioc_val} OR network.dns.answers.data = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_MD5\"\r\n    and (principal.file.md5 = ${ioc_val} OR principal.process.file.md5 = ${ioc_val} OR target.file.md5 = ${ioc_val} OR target.process.file.md5 = ${ioc_val} OR security_result.about.file.md5 = ${ioc_val} OR src.file.md5 = ${ioc_val} OR src.process.file.md5 = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_SHA256\"\r\n    and (principal.file.sha256 = ${ioc_val} OR principal.process.file.sha256 = ${ioc_val} OR target.file.sha256 = ${ioc_val} OR target.process.file.sha256 = ${ioc_val} OR security_result.about.file.sha256 = ${ioc_val} OR src.file.sha256 = ${ioc_val} OR src.process.file.sha256 = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_SHA1\"\r\n    and (principal.file.sha1 = ${ioc_val} OR principal.process.file.sha1 = ${ioc_val} OR target.file.sha1 = ${ioc_val} OR target.process.file.sha1 = ${ioc_val} OR security_result.about.file.sha1 = ${ioc_val} OR src.file.sha1 = ${ioc_val} OR src.process.file.sha1 = ${ioc_val})\r\n)"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "d5897984-917a-4c39-83d5-5108fe28f99a",
+                    "displayName": "markdown",
+                    "visualization": {
+                        "markdown": {
+                            "content": "## ![Cyware Logo](https://cdn.cyware.com/logos/cyware-intel-exchange.png) Cyware Intel Exchange - Correlation Overview\n---\nThe Correlation dashboard is designed to identify relationships of Cyware Intel Exchange IOCs and events from other sources.\n\n**IOC Match Visibility**: Monitor IOCs matched in your environment",
+                            "properties": {
+                                "backgroundColor": "transparent"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_MARKDOWN",
+                    "etag": "af6c044f86e956526cc0421d9393787a233f30c41de787da81da814cdb05d809"
+                },
+                {
+                    "name": "8a2fae3c-62c4-4c27-90a7-596dbd7cce00",
+                    "displayName": "IOCs Geolocation Overview",
+                    "description": "IOCs Geolocation Overview",
+                    "chartDatasource": {
+                        "dashboardQuery": "e2b5c18b-f371-4ce4-bbaf-1ce27064f010",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "MAP",
+                                "encode": {},
+                                "dataLabel": {}
+                            }
+                        ],
+                        "googleMapsConfig": {
+                            "dataSettings": {
+                                "latitudeColumn": "max_latitude",
+                                "longitudeColumn": "max_longitude",
+                                "countColumn": "count"
+                            },
+                            "plotMode": "PLOT_MODE_BOTH",
+                            "mapPosition": {
+                                "fitData": true,
+                                "latitudeValue": 37.421995,
+                                "longitudeValue": -122.084092,
+                                "zoomScaleValue": 3.078680116503973
+                            },
+                            "pointSettings": {
+                                "pointSizeType": "POINT_SIZE_TYPE_FIXED",
+                                "color": "#009886"
+                            }
+                        }
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "3bb8c731106bb00014fca4e8e3150c267a08a13300bae149ec9f8740e36b50fd",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "bd052416-4d4c-4b52-a875-aecff917223c",
+                    "displayName": "Medium Severity IOC Matches",
+                    "description": "Number of IOC Matches with Medium severity or risk score is between 30 to 69.",
+                    "chartDatasource": {
+                        "dashboardQuery": "14f2c5e9-c0ca-4d94-8468-139050535595",
+                        "dataSources": [
+                            "IOC_MATCHES"
+                        ]
+                    },
+                    "visualization": {
+                        "series": [
+                            {
+                                "seriesType": "TEXT",
+                                "label": "Medium Severity IOC Matches",
+                                "field": "medium_severity_ioc_count",
+                                "metricTrendConfig": {
+                                    "metricFormat": "METRIC_FORMAT_NUMBER",
+                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE_AND_PERCENTAGE",
+                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
+                                }
+                            }
+                        ],
+                        "xAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                "axisType": "VALUE"
+                            }
+                        ],
+                        "legends": [
+                            {
+                                "legendOrient": "HORIZONTAL"
+                            }
+                        ],
+                        "groupingType": "Off",
+                        "thresholdColoringEnabled": true,
+                        "visualMaps": [
+                            {
+                                "visualMapType": "PIECEWISE",
+                                "pieces": [
+                                    {
+                                        "min": "0",
+                                        "max": "1000000000000000000",
+                                        "color": "#eb730a"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "tileType": "TILE_TYPE_VISUALIZATION",
+                    "etag": "7843b95dd822a7738144ebf09322a75adf8ab05042424a51174f4c78dc14eee8",
+                    "drillDownConfig": {}
+                },
+                {
+                    "name": "49164f61-8af5-4143-a9e4-c04f0b3dd950",
                     "displayName": "IOC Matches Over Time By Severity",
                     "description": "IOC Matches Over Time By Severity",
                     "chartDatasource": {
-                        "dashboardQuery": "91e7bdad-0adf-47e8-a02f-74974fe6b107",
+                        "dashboardQuery": "d531f476-42c3-471e-b42c-17ffedb3fad3",
                         "dataSources": [
                             "IOC_MATCHES"
                         ]
@@ -646,369 +936,13 @@
                         "groupingType": "Grouped"
                     },
                     "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "5bc3793986cd614c1b1bf652e2fc400e5b0e28dd2b59602ef5418312022df952",
-                    "drillDownConfig": {}
-                },
-                {
-                    "name": "3ac2894c-6728-41ed-9874-d5917726cca8",
-                    "displayName": "IOCs Matched",
-                    "description": "Details of Matched IOCs. Results are limited to 10000 IOC matches.",
-                    "chartDatasource": {
-                        "dashboardQuery": "808a9781-586f-447b-9606-6eeb10be7619",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "xAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "yAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "legends": [
-                            {
-                                "legendOrient": "HORIZONTAL"
-                            }
-                        ],
-                        "columnDefs": [
-                            {
-                                "field": "ioc_val",
-                                "header": "IOC Value"
-                            },
-                            {
-                                "field": "ioc_type",
-                                "header": "IOC Type"
-                            },
-                            {
-                                "field": "classification",
-                                "header": "Severity"
-                            },
-                            {
-                                "field": "category",
-                                "header": "Categories"
-                            },
-                            {
-                                "field": "latitude",
-                                "header": "Latitude"
-                            },
-                            {
-                                "field": "longitude",
-                                "header": "Longitude"
-                            },
-                            {
-                                "field": "match_bucket",
-                                "header": "IOC Match Date"
-                            },
-                            {
-                                "field": "country",
-                                "header": "Country"
-                            },
-                            {
-                                "field": "confidence",
-                                "header": "confidence"
-                            },
-                            {
-                                "field": "hostname",
-                                "header": "Hostname"
-                            }
-                        ],
-                        "groupingType": "Off"
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "7c849b410146071db29a9fe887293002394b95fafd638c8154a9ca0e01055883",
-                    "drillDownConfig": {
-                        "leftDrillDowns": [
-                            {
-                                "id": "6A6A35C2-C76F-4E7B-8864-753A798AD03B",
-                                "displayName": "IOC match drilldown",
-                                "customSettings": {
-                                    "newTab": true,
-                                    "leftClickColumn": "ioc_val",
-                                    "query": {
-                                        "query": "(\r\n    ${ioc_type} = \"IOC_TYPE_DOMAIN\"\r\n    and (target.hostname=${ioc_val} OR network.dns.questions.name=${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_IP\"\r\n    and (target.ip = ${ioc_val} OR network.dns.answers.data = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_MD5\"\r\n    and (principal.file.md5 = ${ioc_val} OR principal.process.file.md5 = ${ioc_val} OR target.file.md5 = ${ioc_val} OR target.process.file.md5 = ${ioc_val} OR security_result.about.file.md5 = ${ioc_val} OR src.file.md5 = ${ioc_val} OR src.process.file.md5 = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_SHA256\"\r\n    and (principal.file.sha256 = ${ioc_val} OR principal.process.file.sha256 = ${ioc_val} OR target.file.sha256 = ${ioc_val} OR target.process.file.sha256 = ${ioc_val} OR security_result.about.file.sha256 = ${ioc_val} OR src.file.sha256 = ${ioc_val} OR src.process.file.sha256 = ${ioc_val})\r\n)\r\nOR\r\n(\r\n    ${ioc_type} = \"IOC_TYPE_FILE_HASH_SHA1\"\r\n    and (principal.file.sha1 = ${ioc_val} OR principal.process.file.sha1 = ${ioc_val} OR target.file.sha1 = ${ioc_val} OR target.process.file.sha1 = ${ioc_val} OR security_result.about.file.sha1 = ${ioc_val} OR src.file.sha1 = ${ioc_val} OR src.process.file.sha1 = ${ioc_val})\r\n)"
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                },
-                {
-                    "name": "c85ce71e-bb69-4d3a-b64b-bbd27709233b",
-                    "displayName": "Medium Severity IOC Matches",
-                    "description": "Number of IOC Matches with Medium severity or risk score is between 30 to 69.",
-                    "chartDatasource": {
-                        "dashboardQuery": "c86fb2a9-c284-45ca-ba81-1b425032885b",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "series": [
-                            {
-                                "seriesType": "TEXT",
-                                "label": "Medium Severity IOC Matches",
-                                "field": "medium_severity_ioc_count",
-                                "metricTrendConfig": {
-                                    "metricFormat": "METRIC_FORMAT_NUMBER",
-                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE_AND_PERCENTAGE",
-                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
-                                }
-                            }
-                        ],
-                        "xAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "yAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "legends": [
-                            {
-                                "legendOrient": "HORIZONTAL"
-                            }
-                        ],
-                        "groupingType": "Off",
-                        "thresholdColoringEnabled": true,
-                        "visualMaps": [
-                            {
-                                "visualMapType": "PIECEWISE",
-                                "pieces": [
-                                    {
-                                        "min": "0",
-                                        "max": "1000000000000000000",
-                                        "color": "#eb730a"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "85793186d2d312ab0174ca0bde0f946e1da82ed88e5165d08483e63efa8f0c4a",
-                    "drillDownConfig": {}
-                },
-                {
-                    "name": "f6dc0618-fa59-4c84-a286-f4a07a76f74d",
-                    "displayName": "High Severity IOC Matches",
-                    "description": "Number of IOC Matches with High severity or risk score >= 70.",
-                    "chartDatasource": {
-                        "dashboardQuery": "2f892bdc-fcb7-4166-9482-7da024fb18c5",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "series": [
-                            {
-                                "seriesType": "TEXT",
-                                "label": "High Severity IOC Matches",
-                                "field": "high_severity_ioc_count",
-                                "metricTrendConfig": {
-                                    "metricFormat": "METRIC_FORMAT_NUMBER",
-                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE_AND_PERCENTAGE",
-                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
-                                }
-                            }
-                        ],
-                        "xAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "yAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "legends": [
-                            {
-                                "legendOrient": "HORIZONTAL"
-                            }
-                        ],
-                        "groupingType": "Off",
-                        "thresholdColoringEnabled": true,
-                        "visualMaps": [
-                            {
-                                "visualMapType": "PIECEWISE",
-                                "pieces": [
-                                    {
-                                        "min": "0",
-                                        "max": "1000000000000000000",
-                                        "color": "#ec453b"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "6facd3a86e653c9ec695d332d0665b35ca72b89cb232c9901f89c47c10332a85",
-                    "drillDownConfig": {}
-                },
-                {
-                    "name": "14fba74c-e273-42ee-b2ab-627973ee4eb7",
-                    "displayName": "Unique IOC Matches",
-                    "description": "Number of Unique IOC Matches in SecOps",
-                    "chartDatasource": {
-                        "dashboardQuery": "361f98a6-c368-4ffb-9089-6123dc0ecfcc",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "series": [
-                            {
-                                "seriesType": "TEXT",
-                                "label": "Unique IOC Matches",
-                                "field": "ip_count",
-                                "metricTrendConfig": {
-                                    "metricFormat": "METRIC_FORMAT_NUMBER",
-                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
-                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
-                                }
-                            }
-                        ],
-                        "xAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "yAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "legends": [
-                            {
-                                "legendOrient": "HORIZONTAL"
-                            }
-                        ],
-                        "groupingType": "Off"
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "39d8d27022ae07209e8659a1b99b53d7ccb501269ec300439d7a934608370409",
-                    "drillDownConfig": {}
-                },
-                {
-                    "name": "a43fdd5b-9360-4a3f-84e4-ea5749e54c33",
-                    "displayName": "Unique IOC Matches (Last 7 Days)",
-                    "description": "Number of Unique IOC Matches in SecOps for Last 7 Days.",
-                    "chartDatasource": {
-                        "dashboardQuery": "55fe7b0d-80b3-4a9b-b129-66721972fbc8",
-                        "dataSources": [
-                            "IOC_MATCHES"
-                        ]
-                    },
-                    "visualization": {
-                        "series": [
-                            {
-                                "seriesType": "TEXT",
-                                "label": "Unique IOC Matches (Last 7 Days)",
-                                "field": "ip_count",
-                                "metricTrendConfig": {
-                                    "metricFormat": "METRIC_FORMAT_NUMBER",
-                                    "metricDisplayTrend": "METRIC_DISPLAY_TREND_ABSOLUTE_VALUE",
-                                    "metricTrendType": "METRIC_TREND_TYPE_REGULAR"
-                                }
-                            }
-                        ],
-                        "xAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "yAxes": [
-                            {
-                                "axisType": "VALUE"
-                            }
-                        ],
-                        "legends": [
-                            {
-                                "legendOrient": "HORIZONTAL"
-                            }
-                        ],
-                        "groupingType": "Off"
-                    },
-                    "tileType": "TILE_TYPE_VISUALIZATION",
-                    "etag": "53407fecc47be9c2d0e33ed2ca2a62a66a19abf1169ccfb8a638abf6bad5471e",
+                    "etag": "71e25071a25f1a956f6ab99337b8398d7821e495aa131f83df7fc911e59c29cb",
                     "drillDownConfig": {}
                 }
             ],
             "dashboardQueries": [
                 {
-                    "name": "55fe7b0d-80b3-4a9b-b129-66721972fbc8",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "7"
-                        }
-                    },
-                    "etag": "c33367272b675f5eb286d59377b3e28cda595bff0a967ab8ca8d8fa5c8cd0cc3"
-                },
-                {
-                    "name": "808a9781-586f-447b-9606-6eeb10be7619",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value\r\n$ioc_type = ioc.ioc_type\r\n$confidence = ioc.confidence_score\r\n$classification = strings.to_upper(ioc.severity)\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds)\r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.latitude\r\n$country = if(ioc.location.country_or_region!=\"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_val, $ioc_type, $classification, $category, $latitude, $longitude, $match_bucket, $country, $confidence\r\noutcome:\r\n    $hostname = re.replace(re.replace(re.replace(arrays.join_string(array_distinct(ioc.asset.hostname), \",\"), \",,+\", \",\"), \"^,|,$\", \"\"), \"^\\\\s*$|^$\", \"-\")\r\norder:\r\n    $match_bucket desc\r\nlimit:\r\n    10000\r\n",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "b7a04c9b7c652b1f24f3779540766d870a8d558fff121a9f8399b7df73a379c9"
-                },
-                {
-                    "name": "4007b4ca-7385-4d3e-bd86-6eb17c8ab12c",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value\r\n$ioc_type = ioc.ioc_type\r\n$classification = ioc.severity\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_type\r\noutcome: \r\n    $count = count_distinct(strings.concat($ioc_val, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country)) \r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "6ed4851bd85453a145e099f77cc40a4d2ff8c874780e72216d9b039f984e9dbe"
-                },
-                {
-                    "name": "dbdc3300-7283-49e6-8f0a-0d6b1602bb80",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type\r\n$classification = ioc.severity\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_val, $ioc_type\r\noutcome: \r\n    $count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "23105e24dd1012a5c472e7e9220cfb84758713791efb54fa6bb489384998c77c"
-                },
-                {
-                    "name": "e440a105-e5d4-491d-9c08-759e802b76ba",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$score = cast.as_int(ioc.confidence_score)\r\n$entityid = ioc.ioc_value\r\n\r\n$risk_category = if(cast.as_int(ioc.confidence_score) = 0, \"None\", if(cast.as_int(ioc.confidence_score) >= 1 and cast.as_int(ioc.confidence_score) <= 29, \"Low\", if(cast.as_int(ioc.confidence_score) >= 30 and cast.as_int(ioc.confidence_score) <= 69, \"Medium\", if(cast.as_int(ioc.confidence_score) >= 70, \"High\", \"Unknown\"))))\r\nmatch:\r\n    $risk_category\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "f7e975581964e46ae216e3a316a71e00a75da3c07cd9e376d27a643fe359206e"
-                },
-                {
-                    "name": "9db23985-34b4-4c61-bd5e-11bf8fc9a607",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "30"
-                        }
-                    },
-                    "etag": "3c9ab7973ac215c115032465377b31347fc5f2119c9c88d2e53f0c844fc8d194"
-                },
-                {
-                    "name": "c86fb2a9-c284-45ca-ba81-1b425032885b",
+                    "name": "14f2c5e9-c0ca-4d94-8468-139050535595",
                     "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\nstrings.to_lower(ioc.severity) = \"medium\" or (cast.as_int(ioc.confidence_score) >= 30 and cast.as_int(ioc.confidence_score) <= 69)\r\noutcome:\r\n    $medium_severity_ioc_count = count_distinct(ioc.ioc_value)",
                     "input": {
                         "relativeTime": {
@@ -1016,54 +950,10 @@
                             "startTimeVal": "90"
                         }
                     },
-                    "etag": "7d45d2863a91bf64646ca9bcbfb6e1b9f65938c05d01e8f655d54537c8380784"
+                    "etag": "b6b5d0f803ae69432a0cb9c957a725fb94751bef5f22942f82f162945867bee1"
                 },
                 {
-                    "name": "2f892bdc-fcb7-4166-9482-7da024fb18c5",
-                    "query": " ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\nstrings.to_lower(ioc.severity) = \"high\" or (cast.as_int(ioc.confidence_score) >= 70)\r\noutcome:\r\n    $high_severity_ioc_count = count_distinct(ioc.ioc_value)",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "c878cb769245230f4be7ecf5b333373686a3e8068ddca7ff7b230b96d7e8f2ac"
-                },
-                {
-                    "name": "361f98a6-c368-4ffb-9089-6123dc0ecfcc",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "6adaa3fc97aa2c9786353475939f3a2a6291538972ba7125d5c998fc8bc4c28b"
-                },
-                {
-                    "name": "ea59858c-90a6-4c89-b224-28d446ac659a",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "HOUR",
-                            "startTimeVal": "24"
-                        }
-                    },
-                    "etag": "6db4736de98814cb29541493775e27a585eac82837c4701ad752b2c3fcd109ee"
-                },
-                {
-                    "name": "69aef190-3c2c-41a2-b6eb-1dac3e0d9779",
-                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\nioc.location.country_or_region != \"\"\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch:\r\n    $country\r\noutcome:\r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    $max_latitude = max(ioc.location.region_coordinates.latitude)\r\n    $max_longitude = max(ioc.location.region_coordinates.longitude)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10000",
-                    "input": {
-                        "relativeTime": {
-                            "timeUnit": "DAY",
-                            "startTimeVal": "90"
-                        }
-                    },
-                    "etag": "a27ea226d40b10fa08da77b88afd3936444ff6266296af4314a945e85054bc54"
-                },
-                {
-                    "name": "91e7bdad-0adf-47e8-a02f-74974fe6b107",
+                    "name": "d531f476-42c3-471e-b42c-17ffedb3fad3",
                     "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value\r\n$date=timestamp.get_date(ioc.day_bucket_seconds)\r\n$severity = strings.to_upper(ioc.severity)\r\nmatch:\r\n    $date, $severity\r\noutcome:\r\n    $count=count_distinct($ioc_val)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10000",
                     "input": {
                         "relativeTime": {
@@ -1071,7 +961,117 @@
                             "startTimeVal": "90"
                         }
                     },
-                    "etag": "9b24e7d08e55be9bb7517bbde358063d5e3c388c5dcdab807f15d2c9fce0f4aa"
+                    "etag": "255d71bcbd866a012bc61c69da9a036798048d8e7075facfd9a00b3eff160265"
+                },
+                {
+                    "name": "f2230e46-2230-4b57-beff-400c882b731e",
+                    "query": " ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\nstrings.to_lower(ioc.severity) = \"high\" or (cast.as_int(ioc.confidence_score) >= 70)\r\noutcome:\r\n    $high_severity_ioc_count = count_distinct(ioc.ioc_value)",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "1b66fe7f723849820fede8ceb932dc11a9a73ce66ed66dea2ba26e5ee3f07bcc"
+                },
+                {
+                    "name": "1fbb989a-e98e-4998-9a9e-e634d0c8ae8c",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value\r\n$ioc_type = ioc.ioc_type\r\n$confidence = ioc.confidence_score\r\n$classification = strings.to_upper(ioc.severity)\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds)\r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.latitude\r\n$country = if(ioc.location.country_or_region!=\"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_val, $ioc_type, $classification, $category, $latitude, $longitude, $match_bucket, $country, $confidence\r\noutcome:\r\n    $hostname = re.replace(re.replace(re.replace(arrays.join_string(array_distinct(ioc.asset.hostname), \",\"), \",,+\", \",\"), \"^,|,$\", \"\"), \"^\\\\s*$|^$\", \"-\")\r\norder:\r\n    $match_bucket desc\r\nlimit:\r\n    10000\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "ab4b65f6af1a89142d5fa7c2a82a1a8c99606c2e27980db24bbf3935bb2ab738"
+                },
+                {
+                    "name": "c7335e7c-c7ca-4ed3-9a10-e8443ca26056",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value\r\n$ioc_type = ioc.ioc_type\r\n$classification = ioc.severity\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_type\r\noutcome: \r\n    $count = count_distinct(strings.concat($ioc_val, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country)) \r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "7271ba802bdc58fc02e3b0c662e16f3715cc4d8c11de046a0b433431c89af48d"
+                },
+                {
+                    "name": "9bb4eb47-148c-48f9-83b0-bfe7c816794c",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "35cd8b305e5b0a54b1b09b73bbec8c6bbc2d14ffc82e1a431f52a01da526c82d"
+                },
+                {
+                    "name": "9fdf11ce-0223-404e-b984-7b7586ffaf6d",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "7"
+                        }
+                    },
+                    "etag": "7b4261def5c2bec9308e2e831e05582f62fb042a66d277348aa93776cb6aad4b"
+                },
+                {
+                    "name": "89a9b582-c02e-4ae7-80b1-c658ea47c8d5",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type\r\n$classification = ioc.severity\r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch: \r\n    $ioc_val, $ioc_type\r\noutcome: \r\n    $count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\norder: \r\n    $count desc \r\nlimit: \r\n    10",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "bf0eea61fed865e486359e49fae53899c0be585ad7894abbd624917193dd003a"
+                },
+                {
+                    "name": "e022e1c2-f5fd-4a28-87e1-6c2af999e457",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "HOUR",
+                            "startTimeVal": "24"
+                        }
+                    },
+                    "etag": "cf40cc1d2099045cd2ca84a270b8cbe84a374bc04e37925ed0c9dcd1f4839553"
+                },
+                {
+                    "name": "2f72bc87-5e11-4e03-b27d-2dd62cf7e9e0",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$score = cast.as_int(ioc.confidence_score)\r\n$entityid = ioc.ioc_value\r\n\r\n$risk_category = if(cast.as_int(ioc.confidence_score) = 0, \"None\", if(cast.as_int(ioc.confidence_score) >= 1 and cast.as_int(ioc.confidence_score) <= 29, \"Low\", if(cast.as_int(ioc.confidence_score) >= 30 and cast.as_int(ioc.confidence_score) <= 69, \"Medium\", if(cast.as_int(ioc.confidence_score) >= 70, \"High\", \"Unknown\"))))\r\nmatch:\r\n    $risk_category\r\noutcome:\r\n    $count = count_distinct($entityid)\r\norder:\r\n    $count desc\r\nlimit:\r\n    15",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "863d68c309a5452f1639e582bca4a21033d1626a48629638361ea41525c94263"
+                },
+                {
+                    "name": "e2b5c18b-f371-4ce4-bbaf-1ce27064f010",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ip = ioc.ioc_value \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude\r\nioc.location.country_or_region != \"\"\r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\nmatch:\r\n    $country\r\noutcome:\r\n    $count = count_distinct(strings.concat($ip, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n    $max_latitude = max(ioc.location.region_coordinates.latitude)\r\n    $max_longitude = max(ioc.location.region_coordinates.longitude)\r\norder:\r\n    $count desc\r\nlimit:\r\n    10000",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "90"
+                        }
+                    },
+                    "etag": "1d5cec1eba0abe95670012fbd1e40a5c0f6a4536dccde0612646b95b27598170"
+                },
+                {
+                    "name": "d2569437-aaa1-40b9-a021-008994cb14a8",
+                    "query": "ioc.feed_log_type = \"CTIX\"\r\nioc.feed_name = \"Cyware Intel Exchange\"\r\n$ioc_val = ioc.ioc_value \r\n$ioc_type = ioc.ioc_type \r\n$classification = ioc.severity \r\n$match_bucket = timestamp.get_date(ioc.day_bucket_seconds) \r\n$category = ioc.category\r\n$latitude = ioc.location.region_coordinates.latitude\r\n$longitude = ioc.location.region_coordinates.longitude \r\n$country = if(ioc.location.country_or_region != \"\", ioc.location.country_or_region, \"-\") \r\noutcome:\r\n    $ip_count = count_distinct(strings.concat($ioc_val, \"|\", $ioc_type, \"|\", $classification, \"|\", $category, \"|\", cast.as_string(cast.as_int($latitude * 1000000)), \"|\", cast.as_string(cast.as_int($longitude * 1000000)), \"|\", $match_bucket, \"|\", $country))\r\n",
+                    "input": {
+                        "relativeTime": {
+                            "timeUnit": "DAY",
+                            "startTimeVal": "30"
+                        }
+                    },
+                    "etag": "37586da577dd31f7f136818fa1b58170cc28ea3d355683cd3e9ed738dbd83ec1"
                 }
             ]
         }

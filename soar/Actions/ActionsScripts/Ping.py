@@ -5,7 +5,12 @@ from SiemplifyAction import SiemplifyAction
 from SiemplifyUtils import output_handler
 
 from api_manager import APIManager
-from constants import COMMON_ACTION_ERROR_MESSAGE, PING_SCRIPT_NAME, RESULT_VALUE_FALSE, RESULT_VALUE_TRUE
+from constants import (
+    COMMON_ACTION_ERROR_MESSAGE,
+    PING_SCRIPT_NAME,
+    RESULT_VALUE_FALSE,
+    RESULT_VALUE_TRUE,
+)
 from utils import get_integration_params
 
 

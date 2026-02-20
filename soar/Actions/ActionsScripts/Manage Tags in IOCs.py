@@ -10,13 +10,13 @@ from api_manager import APIManager
 from constants import (
     ADD_TAGS_TO_IOC_SCRIPT_NAME,
     COMMON_ACTION_ERROR_MESSAGE,
+    NO_ENTITIES_ERROR,
+    NO_VALID_IOC_ERROR,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR,
-    NO_VALID_IOC_ERROR
 )
 from cyware_exceptions import CywareException
-from utils import get_integration_params, string_to_list, get_entities
+from utils import get_entities, get_integration_params, string_to_list
 
 
 @output_handler
@@ -33,8 +33,10 @@ def main():
     try:
         base_url, access_id, secret_key, verify_ssl = get_integration_params(siemplify)
         tags_str = siemplify.extract_action_param("Tags", print_value=True, is_mandatory=True)
-        operation_type = siemplify.extract_action_param("Operation Type", print_value=True, is_mandatory=True)
-        ioc_values = get_entities(siemplify);
+        operation_type = siemplify.extract_action_param(
+            "Operation Type", print_value=True, is_mandatory=True
+        )
+        ioc_values = get_entities(siemplify)
 
         siemplify.LOGGER.info("----------------- Main - Started -----------------")
 
@@ -63,7 +65,6 @@ def main():
         invalid_tags = [tag for tag in tag_names if tag not in tag_lookup]
 
         if operation_type == "Add Tag":
-
             # Perform Add Operation
             siemplify.LOGGER.info("Fetching IOC ids from names")
             ioc_lookup = cyware_manager.lookup_iocs(ioc_values)
@@ -108,10 +109,7 @@ def main():
                 status = EXECUTION_STATE_COMPLETED
                 return
 
-            response = cyware_manager.add_tags_to_ioc(
-                object_ids=object_ids,
-                tag_ids=tag_ids
-            )
+            response = cyware_manager.add_tags_to_ioc(object_ids=object_ids, tag_ids=tag_ids)
 
             if response:
                 json_results = json.dumps(response, indent=4)
@@ -120,7 +118,10 @@ def main():
                 )
                 notes = []
                 if invalid_iocs:
-                    notes.append(f"Skipped invalid IOC(s) since they are not found on Cyware Intel Exchange: {', '.join(invalid_iocs)}.")
+                    notes.append(
+                        f"Skipped invalid IOC(s) since they are not found on "
+                        f"Cyware Intel Exchange: {', '.join(invalid_iocs)}."
+                    )
                 if notes:
                     output_message = f"{output_message} {' '.join(notes)}"
                 result_value = RESULT_VALUE_TRUE
@@ -150,10 +151,7 @@ def main():
                 result_value = RESULT_VALUE_FALSE
                 return
 
-            response = cyware_manager.remove_tags_from_ioc(
-                object_ids=object_ids,
-                tag_ids=tag_ids
-            )
+            response = cyware_manager.remove_tags_from_ioc(object_ids=object_ids, tag_ids=tag_ids)
 
             if response:
                 json_results = json.dumps(response, indent=4)
@@ -186,7 +184,7 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")
         siemplify.result.add_result_json(json_results)
@@ -194,6 +192,7 @@ def main():
         siemplify.LOGGER.info(f"result_value: {result_value}")
         siemplify.LOGGER.info(f"Output Message: {output_message}")
         siemplify.end(output_message, result_value, status)
+
 
 if __name__ == "__main__":
     main()

@@ -107,7 +107,7 @@ class CTIXClient:
         response = requests.request(
             method=method,
             url=encoded_url,
-            headers={},
+            headers={"User-Agent": constant.USER_AGENT_NAME},
             json=json_body,
             timeout=(constant.CONNECTION_TIMEOUT, constant.READ_TIMEOUT),
             verify=True,

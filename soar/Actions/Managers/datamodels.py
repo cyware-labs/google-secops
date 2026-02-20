@@ -34,7 +34,7 @@ class AllowedIOC(BaseModel):
         self.id = raw_data.get("id", "N/A")
         self.type = raw_data.get("type", "N/A")
         self.value = raw_data.get("value", "N/A")
-        
+
     def to_csv(self) -> Dict[str, Any]:
         """Return data formatted for CSV/table output."""
         return {
@@ -68,7 +68,11 @@ class IOCDetails(BaseModel):
     def to_csv(self) -> Dict[str, Any]:
         """Return data formatted for CSV/table output."""
         tags_str = "|".join(self.tags) if self.tags else "N/A"
-        sources_str = "|".join(s.get("name", "N/A") for s in self.sources if s.get("name", "")) if self.sources else "N/A"
+        sources_str = (
+            "|".join(s.get("name", "N/A") for s in self.sources if s.get("name", ""))
+            if self.sources
+            else "N/A"
+        )
 
         return {
             "ID": self.id,
@@ -82,7 +86,7 @@ class IOCDetails(BaseModel):
             "Is Whitelisted": "Yes" if self.is_whitelisted else "No",
             "Is False Positive": "Yes" if self.is_false_positive else "No",
         }
-    
+
     def enrich_data(self) -> Dict[str, Any]:
         """
         Get enrich data for siemplify entity.
@@ -113,6 +117,7 @@ class IOCDetails(BaseModel):
                 enrichment[enrichment_key] = value
 
         return enrichment
+
 
 class QuickIntelStatus(BaseModel):
     """Model representing quick intel creation + status."""
@@ -155,13 +160,11 @@ class FalsePositiveResult(BaseModel):
         indicator_records: Optional[List[Dict[str, Any]]] = None,
         message: Optional[str] = None,
     ):
-        super().__init__(
-            {
-                "object_type": object_type,
-                "indicator_records": indicator_records or [],
-                "message": message,
-            }
-        )
+        super().__init__({
+            "object_type": object_type,
+            "indicator_records": indicator_records or [],
+            "message": message,
+        })
         self.object_type = object_type
         self.indicator_records = indicator_records or []
         self.message = message or "Processed"
@@ -169,23 +172,19 @@ class FalsePositiveResult(BaseModel):
     def to_csv(self) -> List[Dict[str, Any]]:
         rows: List[Dict[str, Any]] = []
         for record in self.indicator_records:
-            rows.append(
-                {
-                    "Object Type": self.object_type,
-                    "IOC Value": record.get("value", "N/A"),
-                    "Object ID": record.get("id", "N/A"),
-                    "Status": self.message,
-                }
-            )
+            rows.append({
+                "Object Type": self.object_type,
+                "IOC Value": record.get("value", "N/A"),
+                "Object ID": record.get("id", "N/A"),
+                "Status": self.message,
+            })
 
         if not rows:
-            rows.append(
-                {
-                    "Object Type": self.object_type,
-                    "IOC Value": "N/A",
-                    "Object ID": "N/A",
-                    "Status": self.message,
-                }
-            )
+            rows.append({
+                "Object Type": self.object_type,
+                "IOC Value": "N/A",
+                "Object ID": "N/A",
+                "Status": self.message,
+            })
 
         return rows

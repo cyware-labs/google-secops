@@ -10,15 +10,13 @@ from api_manager import APIManager
 from constants import (
     ADD_ALLOWED_IOCS_SCRIPT_NAME,
     COMMON_ACTION_ERROR_MESSAGE,
+    NO_ENTITIES_ERROR,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR
 )
 from cyware_exceptions import CywareException
-from utils import (
-    get_integration_params,
-    get_entities
-)
+from utils import get_entities, get_integration_params
+
 
 @output_handler
 def main():
@@ -45,13 +43,15 @@ def main():
             return
 
         cyware_manager = APIManager(
-            base_url.strip(), access_id, secret_key, verify_ssl=verify_ssl, siemplify=siemplify
+            base_url.strip(),
+            access_id,
+            secret_key,
+            verify_ssl=verify_ssl,
+            siemplify=siemplify,
         )
 
         response = cyware_manager.add_allowed_iocs(
-            ioc_type=ioc_type,
-            values=entities,
-            reason=reason
+            ioc_type=ioc_type, values=entities, reason=reason
         )
 
         if response:
@@ -62,7 +62,10 @@ def main():
             invalid = details.get("invalid", [])
 
             output_message = f"Successfully processed {len(entities)} indicators. "
-            output_message += f"New: {len(new_created)}, Already exists: {len(already_exists)}, Invalid: {len(invalid)}."
+            output_message += (
+                f"New: {len(new_created)}, Already exists: {len(already_exists)}, "
+                f"Invalid: {len(invalid)}."
+            )
             result_value = RESULT_VALUE_TRUE
             siemplify.LOGGER.info(f"Add IOCs to Allowlist response: {json.dumps(response)}")
         else:
@@ -79,7 +82,7 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")
         siemplify.LOGGER.info(f"Status: {status}")
@@ -87,6 +90,7 @@ def main():
         siemplify.LOGGER.info(f"Output Message: {output_message}")
         siemplify.result.add_result_json(json_results)
         siemplify.end(output_message, result_value, status)
+
 
 if __name__ == "__main__":
     main()

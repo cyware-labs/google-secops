@@ -4,8 +4,9 @@ import json
 
 from ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_FAILED
 from SiemplifyAction import SiemplifyAction
-from SiemplifyUtils import output_handler, construct_csv
+from SiemplifyUtils import construct_csv, output_handler
 
+import datamodels
 from api_manager import APIManager
 from constants import (
     COMMON_ACTION_ERROR_MESSAGE,
@@ -16,7 +17,6 @@ from constants import (
 )
 from cyware_exceptions import CywareException, InvalidIntegerException
 from utils import get_integration_params, validate_integer_param
-import datamodels
 
 
 @output_handler
@@ -34,19 +34,19 @@ def main():
         base_url, access_id, secret_key, verify_ssl = get_integration_params(siemplify)
         ioc_type = siemplify.extract_action_param("IOC Type", print_value=True)
         created_from_str = siemplify.extract_action_param("Created From", print_value=True)
-        
+
         siemplify.LOGGER.info("----------------- Main - Started -----------------")
 
-        created_from = validate_integer_param(created_from_str, "Created From",
-                                               zero_allowed=True) if created_from_str else None
+        created_from = (
+            validate_integer_param(created_from_str, "Created From", zero_allowed=True)
+            if created_from_str
+            else None
+        )
         cyware_manager = APIManager(
             base_url.strip(), access_id, secret_key, verify_ssl=verify_ssl, siemplify=siemplify
         )
 
-        response = cyware_manager.get_allowed_iocs(
-            ioc_type=ioc_type,
-            created_from=created_from
-        )
+        response = cyware_manager.get_allowed_iocs(ioc_type=ioc_type, created_from=created_from)
 
         results = response.get("results", [])
         total = response.get("total", 0)
@@ -63,7 +63,9 @@ def main():
                     f"Showing first {MAX_TABLE_RECORDS} records in table."
                 )
             else:
-                output_message = f"Successfully retrieved {len(results)} allowed IOCs (Total: {total})."
+                output_message = (
+                    f"Successfully retrieved {len(results)} allowed IOCs (Total: {total})."
+                )
 
             siemplify.result.add_data_table("Allowed IOCs", construct_csv(csv_output), "CTIX")
             result_value = RESULT_VALUE_TRUE
@@ -92,7 +94,7 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")
         siemplify.result.add_result_json(results_json)

@@ -4,24 +4,20 @@ import json
 
 from ScriptResult import EXECUTION_STATE_COMPLETED, EXECUTION_STATE_FAILED
 from SiemplifyAction import SiemplifyAction
-from SiemplifyUtils import output_handler, construct_csv
+from SiemplifyUtils import construct_csv, output_handler
 
+import datamodels
 from api_manager import APIManager
 from constants import (
     COMMON_ACTION_ERROR_MESSAGE,
     GET_IOC_DETAILS_BY_ENRICHING_ENTITIES_SCRIPT_NAME,
     MAX_TABLE_RECORDS,
+    NO_ENTITIES_ERROR,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR
 )
-from cyware_exceptions import (
-    CywareException,
-    InvalidFormatException,
-    InvalidIntegerException,
-)
-from utils import get_integration_params, get_entities, get_entities_object
-import datamodels
+from cyware_exceptions import CywareException, InvalidFormatException, InvalidIntegerException
+from utils import get_entities, get_entities_object, get_integration_params
 
 
 @output_handler
@@ -37,8 +33,12 @@ def main():
 
     try:
         base_url, access_id, secret_key, verify_ssl = get_integration_params(siemplify)
-        enrichment_data_str = siemplify.extract_action_param("Enrichment Data", print_value=True, default_value="False")
-        relation_data_str = siemplify.extract_action_param("Relation Data", print_value=True, default_value="False")
+        enrichment_data_str = siemplify.extract_action_param(
+            "Enrichment Data", print_value=True, default_value="False"
+        )
+        relation_data_str = siemplify.extract_action_param(
+            "Relation Data", print_value=True, default_value="False"
+        )
         fields_str = siemplify.extract_action_param("Fields", print_value=True)
 
         siemplify.LOGGER.info("----------------- Main - Started -----------------")
@@ -80,7 +80,10 @@ def main():
             # Limit table rows for display
             if len(csv_output) > MAX_TABLE_RECORDS:
                 csv_output = csv_output[:MAX_TABLE_RECORDS]
-                output_message = f"Successfully retrieved details for {len(results)} IOCs. Showing first {MAX_TABLE_RECORDS} records in table."
+                output_message = (
+                    f"Successfully retrieved details for {len(results)} IOCs. "
+                    f"Showing first {MAX_TABLE_RECORDS} records in table."
+                )
             else:
                 output_message = f"Successfully retrieved details for {len(results)} IOCs."
 
@@ -91,21 +94,29 @@ def main():
             # Get all entities and create IOC values set for filtering
             entities_object = get_entities_object(siemplify)
             siemplify.LOGGER.info(f"Found {len(entities_object)} entities")
-            
+
             # Create set of IOC values from results for efficient lookup
             ioc_values_set = {ioc.get("name", "").lower() for ioc in results if ioc.get("name")}
-            
+
             # Filter entities to keep only those present in results
-            filtered_entities = [entity for entity in entities_object if entity.identifier.lower() in ioc_values_set]
-            siemplify.LOGGER.info(f"Filtered to {len(filtered_entities)} entities present in results")
-            
+            filtered_entities = [
+                entity for entity in entities_object if entity.identifier.lower() in ioc_values_set
+            ]
+            siemplify.LOGGER.info(
+                f"Filtered to {len(filtered_entities)} entities present in results"
+            )
+
             # Create entity map and successful entities list
             entity_map = {entity.identifier.lower(): entity for entity in filtered_entities}
             successful_entities = []
-            
+
             # Enrich entities using IOCDetails datamodel
             for ioc_detail in ioc_details:
-                ioc_value = ioc_detail.name if ioc_detail.name and ioc_detail.name != "N/A" else ioc_detail.raw_data.get("value", "")
+                ioc_value = (
+                    ioc_detail.name
+                    if ioc_detail.name and ioc_detail.name != "N/A"
+                    else ioc_detail.raw_data.get("value", "")
+                )
                 if ioc_value:
                     entity = entity_map.get(ioc_value.lower())
                     if entity:
@@ -114,7 +125,7 @@ def main():
                         entity.is_enriched = True
                         successful_entities.append(entity)
                         siemplify.LOGGER.info(f"Successfully enriched entity: {entity.identifier}")
-            
+
             # Update entities in Siemplify
             if successful_entities:
                 siemplify.update_entities(successful_entities)
@@ -146,19 +157,22 @@ def main():
         siemplify.LOGGER.exception(e)
 
     except Exception as e:
-        output_message = COMMON_ACTION_ERROR_MESSAGE.format(GET_IOC_DETAILS_BY_ENRICHING_ENTITIES_SCRIPT_NAME, e)
+        output_message = COMMON_ACTION_ERROR_MESSAGE.format(
+            GET_IOC_DETAILS_BY_ENRICHING_ENTITIES_SCRIPT_NAME, e
+        )
         result_value = RESULT_VALUE_FALSE
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")
-        siemplify.result.add_result_json(json_results)    
+        siemplify.result.add_result_json(json_results)
         siemplify.LOGGER.info(f"Status: {status}")
         siemplify.LOGGER.info(f"result_value: {result_value}")
         siemplify.LOGGER.info(f"Output Message: {output_message}")
         siemplify.end(output_message, result_value, status)
+
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 INTEGRATION_NAME = "CywareIntelExchange"
+USER_AGENT_NAME = "cyware/intel-exchange (GoogleSecopsSOAR/1.0.0)"
 
 RESULT_VALUE_TRUE = True
 RESULT_VALUE_FALSE = False

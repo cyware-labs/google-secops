@@ -9,14 +9,14 @@ from SiemplifyUtils import output_handler
 from api_manager import APIManager
 from constants import (
     COMMON_ACTION_ERROR_MESSAGE,
+    NO_ENTITIES_ERROR,
+    NO_VALID_IOC_ERROR,
     REMOVE_ALLOWED_IOCS_SCRIPT_NAME,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR,
-    NO_VALID_IOC_ERROR
 )
 from cyware_exceptions import CywareException
-from utils import get_integration_params, string_to_list, get_entities
+from utils import get_entities, get_integration_params
 
 
 @output_handler
@@ -48,7 +48,8 @@ def main():
         missing_iocs = [value for value in entities if value not in ioc_lookup]
         if missing_iocs:
             siemplify.LOGGER.info(
-                f"Indicator(s) not found on Cyware Intel Exchange and will be skipped: {', '.join(missing_iocs)}"
+                f"Indicator(s) not found on Cyware Intel Exchange and will be skipped: "
+                f"{', '.join(missing_iocs)}"
             )
         valid_iocs = [value for value in entities if value in ioc_lookup]
         indicator_ids = [ioc_lookup[value] for value in valid_iocs]
@@ -59,15 +60,14 @@ def main():
             status = EXECUTION_STATE_COMPLETED
             return
 
-        response = cyware_manager.remove_allowed_iocs(
-            indicator_ids=indicator_ids
-        )
+        response = cyware_manager.remove_allowed_iocs(indicator_ids=indicator_ids)
 
         if response:
             json_results = json.dumps(response, indent=4)
             message = response.get("message", "")
             output_message = (
-                f"Successfully removed {len(indicator_ids)} indicator(s) from allowed list. {message}"
+                f"Successfully removed {len(indicator_ids)} indicator(s) from allowed list. "
+                f"{message}"
             )
             result_value = RESULT_VALUE_TRUE
             siemplify.LOGGER.info(f"Remove IOCs from Allowlist response: {json.dumps(response)}")
@@ -88,7 +88,7 @@ def main():
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.result.add_result_json(json_results)
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")

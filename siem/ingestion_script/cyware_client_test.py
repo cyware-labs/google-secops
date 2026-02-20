@@ -914,6 +914,47 @@ class TestCtixRestApi(unittest.TestCase):
         self.assertNotIn("label_name", call_kwargs.get("params", {}))
         self.assertTrue(call_kwargs["url"].startswith(test_url))
 
+    @patch(f"{INGESTION_SCRIPTS_PATH}cyware_client.requests.request")
+    @patch(f"{INGESTION_SCRIPTS_PATH}cyware_client.utils.cloud_logging")
+    def test_ctix_rest_api_user_agent_header(self, mock_log, mock_request):
+        """Test that User-Agent header is included in requests.
+
+        This test covers line 110 in cyware_client.py.
+        This test will FAIL if User-Agent header is removed or changed.
+        """
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_request.return_value = mock_response
+
+        client = cyware_client.CTIXClient(
+            base_url="https://example.com",
+            access_id="id",
+            secret_key="key",
+            tenant_name="tenant",
+        )
+
+        test_url = "https://example.com/api"
+        test_params = {"param1": "value1"}
+        test_json_body = {"key": "value"}
+
+        client._ctix_rest_api("POST", test_url, test_params, test_json_body)
+
+        # Verify requests.request was called with User-Agent header
+        mock_request.assert_called_once()
+        call_kwargs = mock_request.call_args[1]
+        
+        # Verify headers exist and contain User-Agent
+        self.assertIn("headers", call_kwargs)
+        headers = call_kwargs["headers"]
+        self.assertIn("User-Agent", headers)
+        self.assertEqual(headers["User-Agent"], constant.USER_AGENT_NAME)
+        
+        # Verify the User-Agent value matches the constant
+        self.assertEqual(
+            headers["User-Agent"],
+            "cyware/intel-exchange (GoogleSecopsSIEM/1.0.0)"
+        )
+
 
 class TestParseAndHandleResponse(unittest.TestCase):
     """Test _parse_and_handle_response method."""

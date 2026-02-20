@@ -25,6 +25,7 @@ from constants import (
     SIGNATURE_EXPIRY_SECONDS,
     TAGS_ENDPOINT,
     TAGS_PAGE_SIZE,
+    USER_AGENT_NAME,
     WAIT_TIME_FOR_RETRY,
 )
 from cyware_exceptions import (
@@ -53,7 +54,8 @@ class APIManager:
             access_id (str): Access ID for API authentication.
             secret_key (str): Secret Key for API authentication.
             verify_ssl (bool, optional): If True, verify the SSL certificate. Defaults to False.
-            siemplify (object, optional): An instance of the SDK SiemplifyAction class. Defaults to None.
+            siemplify (object, optional): An instance of the SDK SiemplifyAction class.
+                Defaults to None.
         """
         self.base_url = base_url.rstrip("/")
         self.access_id = access_id
@@ -122,6 +124,7 @@ class APIManager:
                     params=all_params,
                     json=json_body,
                     timeout=DEFAULT_REQUEST_TIMEOUT,
+                    headers={"User-Agent": USER_AGENT_NAME},
                 )
 
                 if response.status_code == 200:
@@ -139,9 +142,7 @@ class APIManager:
                     if attempt < retry_count - 1:
                         time.sleep(WAIT_TIME_FOR_RETRY)
                         continue
-                    raise InternalServerError(
-                        f"Server error: {response.status_code}"
-                    )
+                    raise InternalServerError(f"Server error: {response.status_code}")
                 else:
                     response.raise_for_status()
                     return response
@@ -170,12 +171,12 @@ class APIManager:
                     continue
                 # Sanitize any URLs in the exception message
                 error_msg = str(e)
-                if 'http' in error_msg.lower():
+                if "http" in error_msg.lower():
                     raise CywareException(f"Request failed: {error_msg}")
                 raise
 
         return response
-    
+
     def _get_response_error_details(self, response: requests.Response) -> str:
         """Extract user-friendly error details from a failed HTTP response."""
         try:
@@ -195,7 +196,14 @@ class APIManager:
             if isinstance(node, dict):
                 contains_text = any(
                     isinstance(node.get(key), str)
-                    for key in ("message", "log_message", "title", "support_code", "txn_id", "error")
+                    for key in (
+                        "message",
+                        "log_message",
+                        "title",
+                        "support_code",
+                        "txn_id",
+                        "error",
+                    )
                 )
                 if contains_text:
                     entry = node.copy()
@@ -216,11 +224,7 @@ class APIManager:
                 collect_entries(section_value, section_name)
 
         primary_entry = error_entries[0] if error_entries else {}
-        message = (
-            payload.get("message")
-            or primary_entry.get("message")
-            or payload.get("error")
-        )
+        message = payload.get("message") or primary_entry.get("message") or payload.get("error")
         if message:
             details.append(f"Message: {message}")
 
@@ -251,7 +255,6 @@ class APIManager:
 
         return " | ".join(details)
 
-    
     def test_connectivity(self) -> bool:
         """
         Test connectivity to the Cyware CTIX API.
@@ -309,9 +312,7 @@ class APIManager:
         response = self._make_rest_call("POST", TAGS_ENDPOINT, json_body=body)
         return response.json()
 
-    def lookup_iocs(
-        self, ioc_values: List[str], object_type: str = "indicator"
-    ) -> Dict[str, str]:
+    def lookup_iocs(self, ioc_values: List[str], object_type: str = "indicator") -> Dict[str, str]:
         """Resolve IOC names to their IDs."""
         response = self.get_ioc_details(
             ioc_values=ioc_values,
@@ -337,7 +338,7 @@ class APIManager:
         Args:
             ioc_type (str, optional): Filter by indicator type
             created_from (int, optional): Filter IOCs created after this epoch timestamp
-            
+
         Returns:
             dict: Aggregated response containing all pages of results
         """
@@ -376,9 +377,7 @@ class APIManager:
 
         return aggregated_response
 
-    def add_allowed_iocs(
-        self, ioc_type: str, values: List[str], reason: str
-    ) -> Dict[str, Any]:
+    def add_allowed_iocs(self, ioc_type: str, values: List[str], reason: str) -> Dict[str, Any]:
         """
         Add IOCs to the allowed list.
 
@@ -407,9 +406,7 @@ class APIManager:
             dict: Response message
         """
         body = {"object_type": object_type, "object_ids": indicator_ids}
-        response = self._make_rest_call(
-            "POST", BULK_ACTION_UNWHITELIST_ENDPOINT, json_body=body
-        )
+        response = self._make_rest_call("POST", BULK_ACTION_UNWHITELIST_ENDPOINT, json_body=body)
         return response.json()
 
     def get_ioc_details(
@@ -452,9 +449,7 @@ class APIManager:
 
         while True:
             params["page"] = current_page
-            response = self._make_rest_call(
-                "POST", endpoint, params=params, json_body=body
-            )
+            response = self._make_rest_call("POST", endpoint, params=params, json_body=body)
             response_json = response.json()
 
             if aggregated_response is None:
@@ -465,9 +460,7 @@ class APIManager:
 
             next_page = response_json.get("next")
             if not next_page or not response_json.get("results"):
-                aggregated_response["total"] = response_json.get(
-                    "total", len(aggregated_results)
-                )
+                aggregated_response["total"] = response_json.get("total", len(aggregated_results))
                 break
 
             current_page += 1
@@ -547,7 +540,5 @@ class APIManager:
             dict: Response message
         """
         body = {"object_type": object_type, "object_ids": object_ids}
-        response = self._make_rest_call(
-            "POST", BULK_ACTION_FALSE_POSITIVE_ENDPOINT, json_body=body
-        )
+        response = self._make_rest_call("POST", BULK_ACTION_FALSE_POSITIVE_ENDPOINT, json_body=body)
         return response.json()

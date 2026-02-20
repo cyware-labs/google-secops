@@ -10,13 +10,14 @@ from api_manager import APIManager
 from constants import (
     COMMON_ACTION_ERROR_MESSAGE,
     MARK_INDICATOR_FALSE_POSITIVE_SCRIPT_NAME,
+    NO_ENTITIES_ERROR,
+    NO_VALID_IOC_ERROR,
     RESULT_VALUE_FALSE,
     RESULT_VALUE_TRUE,
-    NO_ENTITIES_ERROR,
-    NO_VALID_IOC_ERROR
 )
 from cyware_exceptions import CywareException
-from utils import get_integration_params, get_entities
+from utils import get_entities, get_integration_params
+
 
 @output_handler
 def main():
@@ -64,14 +65,14 @@ def main():
 
         object_ids = [ioc_lookup[value] for value in entities]
 
-        response = cyware_manager.mark_indicator_false_positive(
-            object_ids=object_ids
-        )
+        response = cyware_manager.mark_indicator_false_positive(object_ids=object_ids)
 
         if response:
             json_results = json.dumps(response, indent=4)
             message = response.get("message", "")
-            output_message = f"Successfully marked {len(object_ids)} indicators as false positive. {message}"
+            output_message = (
+                f"Successfully marked {len(object_ids)} indicators as false positive. {message}"
+            )
             result_value = RESULT_VALUE_TRUE
             siemplify.LOGGER.info(f"Mark false positive response: {json.dumps(response)}")
         else:
@@ -86,12 +87,14 @@ def main():
         siemplify.LOGGER.exception(e)
 
     except Exception as e:
-        output_message = COMMON_ACTION_ERROR_MESSAGE.format(MARK_INDICATOR_FALSE_POSITIVE_SCRIPT_NAME, e)
+        output_message = COMMON_ACTION_ERROR_MESSAGE.format(
+            MARK_INDICATOR_FALSE_POSITIVE_SCRIPT_NAME, e
+        )
         result_value = RESULT_VALUE_FALSE
         status = EXECUTION_STATE_FAILED
         siemplify.LOGGER.error(output_message)
         siemplify.LOGGER.exception(e)
-    
+
     finally:
         siemplify.LOGGER.info("----------------- Main - Finished -----------------")
         siemplify.result.add_result_json(json_results)
